@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>GearZone | Gaming Gear & Digital Services + New Pages</title>
-  <meta name="description" content="Best gaming mouse, mechanical keyboard, gaming headset, Steam accounts, Netflix subscriptions, anime figures, new arrivals, deals, brands.">
+  <title>GearZone | Premium Gaming Gear & Digital Services</title>
+  <meta name="description" content="Best gaming mouse, mechanical keyboard, gaming headset, Steam accounts, Netflix subscriptions, anime figures. Ultimate gaming destination.">
+  <meta name="keywords" content="gaming mouse, mechanical keyboard, gaming headset, steam account, netflix account, anime figures, gaming gear">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -15,7 +16,7 @@
       --acc:#00e6ff; --red:#ff3366; --gold:#ffcc33; --green:#00e68a;
       --purple:#b77cff; --steam:#4dc3ff; --nf:#e50914;
       --txt:#eef3fc; --muted:#6a7c9e; --border:rgba(0,230,255,.12);
-      --HDR:64px; --SWB:0px;
+      --HDR:64px;
       --D:'Bebas Neue',cursive; --F:'DM Sans',sans-serif;
     }
     button,a{cursor:pointer;font-family:var(--F);text-decoration:none;color:inherit;}
@@ -70,27 +71,36 @@
     .pc:hover{transform:translateY(-4px);border-color:var(--acc);}
     .pc-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--s2);}
     .pc-b{padding:16px;}
-    .pc-cat{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
     .pc-name{font-weight:700;font-size:15px;margin:6px 0;}
     .pc-price{font-family:var(--D);font-size:22px;color:var(--acc);}
-    .pc-old{font-size:12px;color:var(--muted);text-decoration:line-through;margin-left:6px;}
     .abtn{background:var(--acc);border:none;width:36px;height:36px;border-radius:10px;font-size:18px;color:#000;cursor:pointer;transition:.2s;}
-    .abtn:hover{transform:scale(1.05);}
-
     .category-header{background:linear-gradient(135deg, var(--s1), var(--bg));border-radius:24px;padding:40px;margin-bottom:40px;text-align:center;border:1px solid var(--border);}
-    .category-icon{font-size:64px;margin-bottom:16px;}
     .category-title{font-family:var(--D);font-size:48px;margin-bottom:12px;}
-    .category-desc{color:var(--muted);max-width:600px;margin:0 auto;}
-
-    .subcat-nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;border-bottom:1px solid var(--border);padding-bottom:20px;}
-    .subcat-btn{padding:10px 24px;background:transparent;border:1px solid var(--border);border-radius:40px;font-weight:600;font-size:13px;cursor:pointer;transition:.2s;}
-    .subcat-btn:hover,.subcat-btn.active{background:var(--acc);color:#000;border-color:var(--acc);}
+    .subcat-nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;padding-bottom:20px;}
+    .subcat-btn{padding:10px 24px;background:transparent;border:1px solid var(--border);border-radius:40px;font-weight:600;font-size:13px;cursor:pointer;}
+    .subcat-btn.active{background:var(--acc);color:#000;border-color:var(--acc);}
     .search-bar{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap;}
     .search-input{flex:1;background:var(--s1);border:1px solid var(--border);border-radius:50px;padding:12px 20px;color:var(--txt);font-size:14px;outline:none;}
-    .search-input:focus{border-color:var(--acc);}
-    footer{background:var(--s1);border-top:1px solid var(--border);margin-top:60px;padding:40px 24px 20px;}
-    .ft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1500px;margin:auto;}
-    @media (max-width:800px){.hero-in{grid-template-columns:1fr;}.cart-d{width:100%;}.category-title{font-size:36px;}}
+    
+    /* PRO FOOTER */
+    .footer-pro{background:var(--s1);border-top:2px solid var(--border);margin-top:60px;}
+    .footer-container{max-width:1500px;margin:0 auto;padding:60px 24px 40px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+    .footer-brand .footer-logo{font-family:var(--D);font-size:26px;background:linear-gradient(135deg,var(--acc),var(--steam));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:16px;display:inline-block;}
+    .footer-brand p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:20px;max-width:280px;}
+    .social-links{display:flex;gap:12px;}
+    .social-links a{width:38px;height:38px;border-radius:12px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:.2s;font-size:18px;}
+    .social-links a:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-2px);}
+    .footer-col h4{font-family:var(--D);font-size:18px;margin-bottom:20px;color:var(--acc);letter-spacing:1px;}
+    .footer-col ul{list-style:none;}
+    .footer-col ul li{margin-bottom:12px;}
+    .footer-col ul li a{font-size:13px;color:var(--muted);transition:.2s;cursor:pointer;}
+    .footer-col ul li a:hover{color:var(--acc);padding-left:4px;}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+    .footer-bottom p{font-size:12px;color:var(--muted);}
+    .payment-icons{display:flex;gap:12px;font-size:24px;}
+    @media (max-width:1000px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}.hero-in{grid-template-columns:1fr;}}
+    @media (max-width:600px){.footer-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -104,103 +114,75 @@
       <button class="nbtn" onclick="navigateTo('home')">🏠 Home</button>
       <button class="nbtn" onclick="navigateTo('accessories')">🖱️ Accessories</button>
       <button class="nbtn" onclick="navigateTo('digital')">💎 Digital</button>
-      <button class="nbtn" onclick="navigateTo('new')">✨ New</button>
-      <button class="nbtn" onclick="navigateTo('bestsellers')">🔥 Best Sellers</button>
-      <button class="nbtn" onclick="navigateTo('deals')">⚡ Deals</button>
-      <button class="nbtn" onclick="navigateTo('brands')">🏷️ Brands</button>
       <button class="nbtn" onclick="navigateTo('help')">❓ Help</button>
     </nav>
-    <div class="hdr-r">
-      <button class="ibtn" onclick="openCart()">🛒<span class="bge" id="cartCnt">0</span></button>
-    </div>
+    <div class="hdr-r"><button class="ibtn" onclick="openCart()">🛒<span class="bge" id="cartCnt">0</span></button></div>
   </div>
 </header>
 
-<div class="cart-d" id="cart">
-  <div class="chead"><h3>🛒 Your Cart</h3><button class="btn-outline" style="padding:6px 16px;" onclick="closeCart()">Close</button></div>
-  <div class="cbody" id="cbody"></div>
-  <div class="cfoot" id="cfoot" style="display:none"><div style="display:flex;justify-content:space-between;margin-bottom:14px;"><span>Total</span><span id="ctotal" style="font-family:var(--D);font-size:22px;color:var(--acc);">$0</span></div><button class="btnfull" onclick="closeCart();navigateTo('cart');renderCartPage();">Checkout →</button></div>
-</div>
+<div class="cart-d" id="cart"><div class="chead"><h3>🛒 Cart</h3><button class="btn-outline" style="padding:6px 16px;" onclick="closeCart()">Close</button></div><div class="cbody" id="cbody"></div><div class="cfoot" id="cfoot" style="display:none"><div style="display:flex;justify-content:space-between;margin-bottom:14px;"><span>Total</span><span id="ctotal" style="font-family:var(--D);font-size:22px;color:var(--acc);">$0</span></div><button class="btnfull" onclick="closeCart();navigateTo('cart');renderCartPage();">Checkout →</button></div></div>
 
 <!-- HOME PAGE -->
 <div class="pg on" id="pg-home">
-  <div class="hero"><div class="wrap hero-in"><div><div class="h-t">GEAR UP<br><i>DOMINATE</i><br>THE GAME</div><p class="h-p">Best gaming mice, keyboards, headsets, Steam accounts & Netflix subscriptions.</p><div class="h-btns"><button class="btn-primary" onclick="navigateTo('accessories')">Shop Accessories</button><button class="btn-primary" style="background:var(--steam);" onclick="navigateTo('digital')">Digital Deals</button></div></div><div style="text-align:center;">⭐ 14,000+ Gamers Trust Us ⭐</div></div></div>
-  <div class="trust"><span>🏆 Best Gaming Gear 2026</span><span>🎧 Top Rated Headsets</span><span>⚡ Instant Digital Delivery</span><span>🔒 30-Day Returns</span></div>
-  <div class="wrap"><div class="sec-hd"><div class="sec-h">🔥 Bestsellers</div><button class="btn-outline" onclick="navigateTo('bestsellers')">View All →</button></div><div class="pgrid" id="homeGrid"></div></div>
-  <div class="wrap"><div class="sec-hd"><div class="sec-h">✨ New Arrivals</div><button class="btn-outline" onclick="navigateTo('new')">View All →</button></div><div class="pgrid" id="homeNewGrid"></div></div>
+  <div class="hero"><div class="wrap hero-in"><div><div class="h-t">GEAR UP<br><i>DOMINATE</i><br>THE GAME</div><p class="h-p">Premium gaming accessories, Steam accounts, Netflix subscriptions & anime figures.</p><div class="h-btns"><button class="btn-primary" onclick="navigateTo('accessories')">Shop Gear</button><button class="btn-primary" style="background:var(--steam);" onclick="navigateTo('digital')">Digital Deals</button></div></div><div style="text-align:center;">⭐ 14,000+ Gamers Trust Us ⭐</div></div></div>
+  <div class="trust"><span>🏆 Best Gaming Gear</span><span>🎧 Top Rated Headsets</span><span>⚡ Instant Delivery</span><span>🔒 30-Day Returns</span></div>
+  <div class="wrap"><div class="sec-hd"><div class="sec-h">🔥 Bestsellers</div><button class="btn-outline" onclick="navigateTo('accessories')">View All →</button></div><div class="pgrid" id="homeGrid"></div></div>
 </div>
 
 <!-- ACCESSORIES PAGE -->
-<div class="pg" id="pg-accessories"><div class="wrap"><div class="category-header"><div class="category-icon">🖱️</div><h1 class="category-title">PC ACCESSORIES</h1><p class="category-desc">Mice, Keyboards, Headsets, Microphones, Controllers & Anime Figures</p></div><div class="subcat-nav" id="accessoriesSubNav"></div><div class="search-bar"><input type="text" id="accSearch" class="search-input" placeholder="🔍 Search gaming mouse, keyboard, headset..."><button class="btn-primary" onclick="filterAccessories()">Search</button></div><div id="accessoriesGrid" class="pgrid"></div></div></div>
+<div class="pg" id="pg-accessories"><div class="wrap"><div class="category-header"><h1 class="category-title">PC ACCESSORIES</h1><p>Mice, Keyboards, Headsets, Microphones, Controllers & Anime Figures</p></div><div class="subcat-nav" id="accessoriesSubNav"></div><div class="search-bar"><input type="text" id="accSearch" class="search-input" placeholder="Search..."><button class="btn-primary" onclick="filterAccessories()">Search</button></div><div id="accessoriesGrid" class="pgrid"></div></div></div>
 
 <!-- DIGITAL PAGE -->
-<div class="pg" id="pg-digital"><div class="wrap"><div class="category-header"><div class="category-icon">💎</div><h1 class="category-title">DIGITAL SERVICES</h1><p class="category-desc">Steam Accounts, Netflix, Xbox Game Pass — Instant Delivery</p></div><div class="subcat-nav" id="digitalSubNav"></div><div class="search-bar"><input type="text" id="digSearch" class="search-input" placeholder="🔍 Steam, CS2 prime, Netflix..."><button class="btn-primary" onclick="filterDigital()">Search</button></div><div id="digitalGrid" class="pgrid"></div></div></div>
+<div class="pg" id="pg-digital"><div class="wrap"><div class="category-header"><h1 class="category-title">DIGITAL SERVICES</h1><p>Steam Accounts, Netflix, Xbox Game Pass — Instant Delivery</p></div><div class="subcat-nav" id="digitalSubNav"></div><div class="search-bar"><input type="text" id="digSearch" class="search-input" placeholder="Search..."><button class="btn-primary" onclick="filterDigital()">Search</button></div><div id="digitalGrid" class="pgrid"></div></div></div>
 
-<!-- NEW ARRIVALS PAGE -->
-<div class="pg" id="pg-new"><div class="wrap"><div class="category-header"><div class="category-icon">✨</div><h1 class="category-title">NEW ARRIVALS</h1><p class="category-desc">Fresh drops — latest gaming gear & digital accounts just added</p></div><div class="search-bar"><input type="text" id="newSearch" class="search-input" placeholder="🔍 Search new products..."><button class="btn-primary" onclick="filterNew()">Search</button></div><div id="newGrid" class="pgrid"></div></div></div>
+<!-- SUPPORT PAGES DYNAMICALLY RENDERED -->
+<div id="supportPagesContainer"></div>
 
-<!-- BEST SELLERS PAGE -->
-<div class="pg" id="pg-bestsellers"><div class="wrap"><div class="category-header"><div class="category-icon">🔥</div><h1 class="category-title">BEST SELLERS</h1><p class="category-desc">Most popular gear loved by thousands of gamers</p></div><div class="search-bar"><input type="text" id="bestsellerSearch" class="search-input" placeholder="🔍 Search bestsellers..."><button class="btn-primary" onclick="filterBestsellers()">Search</button></div><div id="bestsellersGrid" class="pgrid"></div></div></div>
-
-<!-- DEALS OF THE WEEK PAGE -->
-<div class="pg" id="pg-deals"><div class="wrap"><div class="category-header"><div class="category-icon">⚡</div><h1 class="category-title">DEALS OF THE WEEK</h1><p class="category-desc">Limited time discounts — up to 40% OFF</p></div><div class="search-bar"><input type="text" id="dealsSearch" class="search-input" placeholder="🔍 Search deals..."><button class="btn-primary" onclick="filterDeals()">Search</button></div><div id="dealsGrid" class="pgrid"></div></div></div>
-
-<!-- BRANDS PAGE -->
-<div class="pg" id="pg-brands"><div class="wrap"><div class="category-header"><div class="category-icon">🏷️</div><h1 class="category-title">TOP BRANDS</h1><p class="category-desc">Shop by brand — Razer, Logitech, SteelSeries, HyperX & more</p></div><div class="subcat-nav" id="brandsSubNav"></div><div class="search-bar"><input type="text" id="brandsSearch" class="search-input" placeholder="🔍 Search brand or product..."><button class="btn-primary" onclick="filterBrands()">Search</button></div><div id="brandsGrid" class="pgrid"></div></div></div>
-
-<!-- HELP PAGE -->
-<div class="pg" id="pg-help"><div class="wrap"><div class="category-header"><div class="category-icon">❓</div><h1 class="category-title">HELP CENTER</h1></div><div class="pgrid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin-bottom:40px;"><div class="pc"><div class="pc-img">💬</div><div class="pc-b"><div class="pc-name">24/7 Live Chat</div><button class="btn-primary" style="width:100%;margin-top:10px;">Start Chat</button></div></div><div class="pc"><div class="pc-img">📧</div><div class="pc-b"><div class="pc-name">Email Support</div><button class="btn-primary" style="width:100%;margin-top:10px;">Contact</button></div></div><div class="pc"><div class="pc-img">🔄</div><div class="pc-b"><div class="pc-name">Returns Policy</div><button class="btn-primary" style="width:100%;margin-top:10px;" onclick="navigateTo('returns')">View Policy</button></div></div></div><div class="sec-hd"><div class="sec-h">❓ FAQ</div></div><div id="faqList"></div></div></div>
-
-<div class="pg" id="pg-returns"><div class="wrap" style="padding:40px 0;"><div class="category-header"><h1>🔁 30-Day Returns</h1><p>Physical items: return within 30 days. Digital keys replaced if faulty within 24h.</p></div></div></div>
+<!-- CART & SUCCESS -->
 <div class="pg" id="pg-cart"><div class="wrap" style="padding:40px 0;"><div id="cartPageContainer"></div></div></div>
 <div class="pg" id="pg-success"><div class="wrap" style="text-align:center;padding:80px 0;"><div style="font-size:80px;">🎉</div><h2>Order Confirmed!</h2><p>Thank you — digital items sent to email.</p><button class="btn-primary" onclick="navigateTo('home')">Continue Shopping</button></div></div>
 
-<footer><div class="ft-grid"><div><div class="logo">GEARZONE</div><p style="font-size:12px;color:var(--muted);">Best gaming gear & digital accounts</p></div><div><h5>Categories</h5><a onclick="navigateTo('accessories')">Accessories</a><br><a onclick="navigateTo('digital')">Digital</a><br><a onclick="navigateTo('new')">New Arrivals</a><br><a onclick="navigateTo('deals')">Deals</a></div><div><h5>Support</h5><a onclick="navigateTo('help')">Help Center</a><br><a onclick="navigateTo('returns')">Returns</a></div></div></footer>
+<!-- PRO FOOTER -->
+<footer class="footer-pro">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">⚡ GEARZONE</div>
+        <p>Your ultimate destination for premium gaming accessories. Level up your setup with the best gear.</p>
+        <div class="social-links">
+          <a href="#">𝕏</a><a href="#">📘</a><a href="#">📷</a><a href="#">🎮</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a onclick="navigateTo('accessories')">PC Accessories</a></li><li><a onclick="navigateTo('digital');setDigType('steam')">Steam Accounts</a></li><li><a onclick="navigateTo('digital');setDigType('netflix')">Netflix Accounts</a></li><li><a onclick="navigateTo('accessories');setAccSubcat('anime')">Anime Figures</a></li><li><a onclick="navigateTo('accessories')">All Products</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a onclick="navigateTo('helpcenter')">Help Center</a></li><li><a onclick="navigateTo('shipping')">Shipping Info</a></li><li><a onclick="navigateTo('returns')">Returns</a></li><li><a onclick="navigateTo('trackorder')">Track Order</a></li><li><a onclick="navigateTo('contact')">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigateTo('about')">About Us</a></li><li><a onclick="navigateTo('careers')">Careers</a></li><li><a onclick="navigateTo('press')">Press</a></li><li><a onclick="navigateTo('blog')">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a onclick="navigateTo('privacy')">Privacy Policy</a></li><li><a onclick="navigateTo('terms')">Terms of Service</a></li><li><a onclick="navigateTo('cookie')">Cookie Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GearZone. All rights reserved. Premium gaming gear worldwide.</p><div class="payment-icons">💳 🔒 🚚</div></div>
+  </div>
+</footer>
 
 <script>
-  // ======================= FULL PRODUCT DATABASE =======================
-  const ALL_PRODUCTS = [
-    // Accessories with tags for new/bestseller/deal
-    {id:1,name:"Ultralight Gaming Mouse",cat:"mouse",icon:"🖱️",price:49.99,old:69.99,tags:["bestseller"],keywords:"gaming mouse wireless"},
-    {id:2,name:"Mechanical RGB Keyboard",cat:"keyboard",icon:"⌨️",price:89.99,tags:["bestseller","new"],keywords:"mechanical keyboard"},
-    {id:3,name:"Pro Gaming Headset 7.1",cat:"headset",icon:"🎧",price:99.99,old:129.99,tags:["bestseller","deal"],keywords:"gaming headset"},
-    {id:4,name:"USB Condenser Gaming Mic",cat:"mic",icon:"🎙️",price:79.99,tags:["new"],keywords:"gaming mic streaming"},
-    {id:5,name:"Xbox Elite Series 2",cat:"controller",icon:"🎮",price:129.99,tags:["bestseller"],keywords:"xbox controller"},
-    {id:6,name:"Attack Shark X3",cat:"mouse",icon:"🖱️",price:39.99,tags:["new","deal"],keywords:"attack shark mouse"},
-    {id:7,name:"Razer BlackWidow V4",cat:"keyboard",icon:"⌨️",price:139.99,tags:["bestseller"],keywords:"razer keyboard"},
-    {id:8,name:"HyperX Cloud Alpha",cat:"headset",icon:"🎧",price:79.99,tags:["bestseller"],keywords:"hyperx headset"},
-    {id:9,name:"Shure MV7 Dynamic Mic",cat:"mic",icon:"🎙️",price:249.99,tags:["new"],keywords:"shure mic"},
-    {id:10,name:"Glorious Model O",cat:"mouse",icon:"🖱️",price:59.99,tags:["bestseller"],keywords:"glorious mouse"},
-    {id:11,name:"Logitech G Pro X",cat:"mouse",icon:"🖱️",price:149.99,tags:["bestseller","deal"],keywords:"logitech gaming mouse"},
-    {id:12,name:"SteelSeries Apex Pro",cat:"keyboard",icon:"⌨️",price:199.99,tags:["bestseller"],keywords:"steelseries keyboard"},
-    {id:13,name:"Naruto Shippuden Figure",cat:"anime",icon:"🗿",price:69.99,tags:["new"],keywords:"anime figures naruto"},
-    {id:14,name:"Goku Ultra Instinct",cat:"anime",icon:"💛",price:89.99,tags:["bestseller"],keywords:"dragon ball figures"},
-    {id:15,name:"Attack on Titan Levi",cat:"anime",icon:"⚔️",price:74.99,tags:["new"],keywords:"attack on titan"},
-    {id:16,name:"PS5 DualSense",cat:"controller",icon:"🎮",price:69.99,tags:["new"],keywords:"ps5 controller"},
-    {id:17,name:"Razer Kraken V3",cat:"headset",icon:"🎧",price:89.99,tags:["deal"],keywords:"razer headset"},
-    {id:18,name:"Corsair K70 RGB",cat:"keyboard",icon:"⌨️",price:129.99,tags:["bestseller"],keywords:"corsair keyboard"},
-    {id:19,name:"Gaming Chair Ergonomic",cat:"chair",icon:"🪑",price:199.99,old:269.99,tags:["deal"],keywords:"gaming chair"},
-    {id:20,name:"Blue Yeti Nano",cat:"mic",icon:"🎙️",price:89.99,tags:["new"],keywords:"blue yeti mic"},
-    // Digital products
-    {id:101,name:"Steam Account - CS2 Prime",type:"steam",icon:"🎮",price:24.99,tags:["bestseller"],keywords:"steam account cs2"},
-    {id:102,name:"Steam Account - Elden Ring",type:"steam",icon:"⚔️",price:39.99,tags:["bestseller"],keywords:"elden ring"},
-    {id:103,name:"Netflix Premium 4K - 1 Month",type:"netflix",icon:"📺",price:14.99,tags:["bestseller","deal"],keywords:"netflix account"},
-    {id:104,name:"Netflix UHD 1 Year",type:"netflix",icon:"📺",price:119.99,tags:["new"],keywords:"netflix 4k"},
-    {id:105,name:"Steam Wallet $50",type:"steam",icon:"💳",price:46.99,tags:["bestseller"],keywords:"steam wallet"},
-    {id:106,name:"Xbox Game Pass Ultimate 3M",type:"xbox",icon:"🎮",price:39.99,tags:["deal"],keywords:"xbox game pass"},
-    {id:107,name:"Steam Account - Baldur's Gate 3",type:"steam",icon:"🐉",price:44.99,tags:["new"],keywords:"baldurs gate"},
-    {id:108,name:"Netflix Family Plan 6M",type:"netflix",icon:"📺",price:69.99,tags:["new"],keywords:"netflix family"},
-    {id:109,name:"CS2 Prime Upgrade",type:"steam",icon:"🔫",price:15.99,tags:["deal"],keywords:"cs2 prime"},
-    {id:110,name:"HBO Max 3 Months",type:"streaming",icon:"🎬",price:24.99,tags:["new"],keywords:"hbo max"}
+  // PRODUCT DATA
+  const PRODUCTS = [
+    {id:1,name:"Ultralight Gaming Mouse",cat:"mouse",icon:"🖱️",price:49.99,keywords:"gaming mouse wireless"},
+    {id:2,name:"Mechanical RGB Keyboard",cat:"keyboard",icon:"⌨️",price:89.99,keywords:"mechanical keyboard"},
+    {id:3,name:"Pro Gaming Headset",cat:"headset",icon:"🎧",price:99.99,keywords:"gaming headset"},
+    {id:4,name:"USB Condenser Mic",cat:"mic",icon:"🎙️",price:79.99,keywords:"gaming mic"},
+    {id:5,name:"Xbox Elite Controller",cat:"controller",icon:"🎮",price:129.99,keywords:"xbox controller"},
+    {id:6,name:"Attack Shark X3",cat:"mouse",icon:"🖱️",price:39.99,keywords:"attack shark"},
+    {id:7,name:"Razer BlackWidow",cat:"keyboard",icon:"⌨️",price:139.99,keywords:"razer keyboard"},
+    {id:8,name:"Naruto Figure",cat:"anime",icon:"🗿",price:69.99,keywords:"anime figures"},
+    {id:9,name:"Goku Statue",cat:"anime",icon:"💛",price:89.99,keywords:"dragon ball"},
+    {id:10,name:"Steam Account - CS2 Prime",type:"steam",icon:"🎮",price:24.99,keywords:"steam account"},
+    {id:11,name:"Netflix Premium 4K",type:"netflix",icon:"📺",price:14.99,keywords:"netflix account"},
+    {id:12,name:"Steam Wallet $50",type:"steam",icon:"💳",price:46.99,keywords:"steam wallet"},
+    {id:13,name:"Xbox Game Pass 3M",type:"xbox",icon:"🎮",price:39.99,keywords:"xbox game pass"}
   ];
-
-  const BRANDS_LIST = ["Razer","Logitech","SteelSeries","HyperX","Corsair","Glorious","Attack Shark","Shure","Blue"];
-  const FAQS = [{q:"How fast do I get my Steam account?",a:"Instant delivery within 1-3 minutes."},{q:"Are Netflix accounts region-locked?",a:"Works worldwide. 4K supported."},{q:"What if my digital key is invalid?",a:"Replace within 24h at no cost."}];
-
+  
   let cart = JSON.parse(localStorage.getItem('gearzone_cart')) || [];
   let currentAccSubcat = "all", accSearchTerm = "", currentDigType = "all", digSearchTerm = "";
-  let newSearchTerm = "", bestsellerSearchTerm = "", dealsSearchTerm = "", brandsSearchTerm = "", currentBrandFilter = "all";
-
+  
   function saveCart(){localStorage.setItem('gearzone_cart',JSON.stringify(cart));renderCart();}
   function addToCart(item){let ex=cart.find(i=>i.id===item.id);if(ex)ex.qty=(ex.qty||1)+1;else cart.push({...item,qty:1});saveCart();showToast(item.name+" added");}
   function removeFromCart(id){cart=cart.filter(i=>i.id!==id);saveCart();if(document.getElementById('cartPageContainer'))renderCartPage();}
@@ -210,66 +192,74 @@
   function closeCart(){document.getElementById('cart').classList.remove('show');document.getElementById('ov').classList.remove('show');}
   function showToast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
   
-  function navigateTo(page){
-    document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
-    document.getElementById(`pg-${page}`).classList.add('on');
-    document.querySelectorAll('.nbtn').forEach(btn=>btn.classList.remove('active'));
-    if(page==='accessories') renderAccessoriesSubNav(), renderAccessories();
-    if(page==='digital') renderDigitalSubNav(), renderDigital();
-    if(page==='new') renderNewPage();
-    if(page==='bestsellers') renderBestsellersPage();
-    if(page==='deals') renderDealsPage();
-    if(page==='brands') renderBrandsSubNav(), renderBrandsPage();
-    if(page==='home') renderHomePage();
-    window.scrollTo(0,0);
-  }
-
-  function renderHomePage(){
-    let bestsellers = ALL_PRODUCTS.filter(p => p.tags?.includes('bestseller')).slice(0,6);
-    let newItems = ALL_PRODUCTS.filter(p => p.tags?.includes('new')).slice(0,6);
-    document.getElementById('homeGrid').innerHTML = bestsellers.map(p => productCard(p)).join('');
-    document.getElementById('homeNewGrid').innerHTML = newItems.map(p => productCard(p)).join('');
-  }
-
   function productCard(p){
-    return `<div class="pc"><div class="pc-img">${p.icon}</div><div class="pc-b"><div class="pc-cat">${p.cat || p.type || 'gear'}</div><div class="pc-name">${p.name}</div><div><span class="pc-price">$${p.price}</span>${p.old ? `<span class="pc-old">$${p.old}</span>` : ''}</div><button class="abtn" style="margin-top:12px;width:100%;" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>Add +</button></div></div>`;
+    return `<div class="pc"><div class="pc-img">${p.icon}</div><div class="pc-b"><div class="pc-name">${p.name}</div><div class="pc-price">$${p.price}</div><button class="abtn" style="margin-top:12px;width:100%;" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>Add +</button></div></div>`;
   }
-
-  // Accessories
-  function renderAccessoriesSubNav(){let cats=[{id:"all",label:"All"},{id:"mouse",label:"🖱️ Mice"},{id:"keyboard",label:"⌨️ Keyboards"},{id:"headset",label:"🎧 Headsets"},{id:"mic",label:"🎙️ Mics"},{id:"controller",label:"🎮 Controllers"},{id:"anime",label:"🗿 Anime"}];document.getElementById('accessoriesSubNav').innerHTML=cats.map(c=>`<button class="subcat-btn ${currentAccSubcat===c.id?'active':''}" onclick="setAccSubcat('${c.id}')">${c.label}</button>`).join('');}
-  function setAccSubcat(s){currentAccSubcat=s;renderAccessories();}
-  function filterAccessories(){accSearchTerm=document.getElementById('accSearch')?.value.toLowerCase()||'';renderAccessories();}
-  function renderAccessories(){let filtered=ALL_PRODUCTS.filter(p=>p.cat && (currentAccSubcat==='all'||p.cat===currentAccSubcat) && (!accSearchTerm||(p.name.toLowerCase()+p.keywords).includes(accSearchTerm)));document.getElementById('accessoriesGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:40px;">No products</div>';}
-
-  // Digital
-  function renderDigitalSubNav(){let types=[{id:"all",label:"All"},{id:"steam",label:"🎮 Steam"},{id:"netflix",label:"📺 Netflix"},{id:"xbox",label:"🎮 Xbox"}];document.getElementById('digitalSubNav').innerHTML=types.map(t=>`<button class="subcat-btn ${currentDigType===t.id?'active':''}" onclick="setDigType('${t.id}')">${t.label}</button>`).join('');}
-  function setDigType(t){currentDigType=t;renderDigital();}
-  function filterDigital(){digSearchTerm=document.getElementById('digSearch')?.value.toLowerCase()||'';renderDigital();}
-  function renderDigital(){let filtered=ALL_PRODUCTS.filter(p=>p.type && (currentDigType==='all'||p.type===currentDigType) && (!digSearchTerm||(p.name.toLowerCase()+p.keywords).includes(digSearchTerm)));document.getElementById('digitalGrid').innerHTML=filtered.map(productCard).join('');}
-
-  // New Arrivals
-  function renderNewPage(){let filtered=ALL_PRODUCTS.filter(p=>p.tags?.includes('new') && (!newSearchTerm||(p.name.toLowerCase()+p.keywords).includes(newSearchTerm)));document.getElementById('newGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:40px;">No new arrivals found</div>';}
-  function filterNew(){newSearchTerm=document.getElementById('newSearch')?.value.toLowerCase()||'';renderNewPage();}
-
-  // Best Sellers
-  function renderBestsellersPage(){let filtered=ALL_PRODUCTS.filter(p=>p.tags?.includes('bestseller') && (!bestsellerSearchTerm||(p.name.toLowerCase()+p.keywords).includes(bestsellerSearchTerm)));document.getElementById('bestsellersGrid').innerHTML=filtered.map(productCard).join('');}
-  function filterBestsellers(){bestsellerSearchTerm=document.getElementById('bestsellerSearch')?.value.toLowerCase()||'';renderBestsellersPage();}
-
-  // Deals
-  function renderDealsPage(){let filtered=ALL_PRODUCTS.filter(p=>p.tags?.includes('deal') && (!dealsSearchTerm||(p.name.toLowerCase()+p.keywords).includes(dealsSearchTerm)));document.getElementById('dealsGrid').innerHTML=filtered.map(productCard).join('');}
-  function filterDeals(){dealsSearchTerm=document.getElementById('dealsSearch')?.value.toLowerCase()||'';renderDealsPage();}
-
-  // Brands
-  function renderBrandsSubNav(){let brands=[{id:"all",label:"All Brands"},...BRANDS_LIST.map(b=>({id:b.toLowerCase(),label:b}))];document.getElementById('brandsSubNav').innerHTML=brands.map(b=>`<button class="subcat-btn ${currentBrandFilter===b.id?'active':''}" onclick="setBrandFilter('${b.id}')">${b.label}</button>`).join('');}
-  function setBrandFilter(b){currentBrandFilter=b;renderBrandsPage();}
-  function filterBrands(){brandsSearchTerm=document.getElementById('brandsSearch')?.value.toLowerCase()||'';renderBrandsPage();}
-  function renderBrandsPage(){let filtered=ALL_PRODUCTS.filter(p=>{if(currentBrandFilter!=='all' && !p.name.toLowerCase().includes(currentBrandFilter)) return false;if(brandsSearchTerm && !(p.name.toLowerCase()+p.keywords).includes(brandsSearchTerm)) return false;return true;});document.getElementById('brandsGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:40px;">No products from this brand</div>';}
-
-  function renderCartPage(){let container=document.getElementById('cartPageContainer');if(!cart.length){container.innerHTML='<div style="text-align:center;"><h3>Cart empty</h3><button class="btn-primary" onclick="navigateTo(\'home\')">Shop now</button></div>';return;}let total=cart.reduce((a,i)=>a+i.price*i.qty,0);container.innerHTML=`<h2>Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;background:var(--s1);margin:10px 0;padding:16px;border-radius:16px;"><div><span style="font-size:28px;">${i.icon}</span> <strong>${i.name}</strong></div><div><button class="abtn" onclick="updateQty(${i.id},-1)">-</button><span style="margin:0 12px;">${i.qty}</span><button class="abtn" onclick="updateQty(${i.id},1)">+</button><button class="abtn" style="background:var(--red);margin-left:12px;" onclick="removeFromCart(${i.id})">🗑️</button></div><div class="pc-price">$${(i.price*i.qty).toFixed(2)}</div></div>`).join('')}<div style="text-align:right;margin-top:24px;"><h3>Total: $${total.toFixed(2)}</h3><button class="btn-primary" onclick="navigateTo('success');cart=[];saveCart();renderCartPage();">Place Order</button></div>`;}
-  function renderFAQ(){document.getElementById('faqList').innerHTML=FAQS.map((f,i)=>`<div class="faq-i" id="faq${i}" style="border:1px solid var(--border);border-radius:14px;margin-bottom:12px;"><div class="faq-q" style="padding:16px;font-weight:700;cursor:pointer;" onclick="document.getElementById('faq${i}').classList.toggle('op')">${f.q} <span>▼</span></div><div class="faq-a" style="max-height:0;overflow:hidden;transition:.2s;padding:0 16px;">${f.a}</div></div>`).join('');}
   
-  renderHomePage(); renderAccessories(); renderDigital(); renderNewPage(); renderBestsellersPage(); renderDealsPage(); renderBrandsPage(); renderFAQ(); renderCart();
-  window.setAccSubcat=setAccSubcat; window.setDigType=setDigType; window.setBrandFilter=setBrandFilter; window.filterAccessories=filterAccessories; window.filterDigital=filterDigital; window.filterNew=filterNew; window.filterBestsellers=filterBestsellers; window.filterDeals=filterDeals; window.filterBrands=filterBrands; window.updateQty=updateQty; window.navigateTo=navigateTo;
+  function renderHome(){let best=PRODUCTS.slice(0,6);document.getElementById('homeGrid').innerHTML=best.map(productCard).join('');}
+  function renderAccessories(){let filtered=PRODUCTS.filter(p=>p.cat && (currentAccSubcat==='all'||p.cat===currentAccSubcat) && (!accSearchTerm||(p.name.toLowerCase()+p.keywords).includes(accSearchTerm)));document.getElementById('accessoriesGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:40px;">No products</div>';}
+  function renderDigital(){let filtered=PRODUCTS.filter(p=>p.type && (currentDigType==='all'||p.type===currentDigType) && (!digSearchTerm||(p.name.toLowerCase()+p.keywords).includes(digSearchTerm)));document.getElementById('digitalGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:40px;">No products</div>';}
+  function renderAccessoriesSubNav(){let cats=[{id:"all",label:"All"},{id:"mouse",label:"🖱️ Mice"},{id:"keyboard",label:"⌨️ Keyboards"},{id:"headset",label:"🎧 Headsets"},{id:"mic",label:"🎙️ Mics"},{id:"controller",label:"🎮 Controllers"},{id:"anime",label:"🗿 Anime"}];document.getElementById('accessoriesSubNav').innerHTML=cats.map(c=>`<button class="subcat-btn ${currentAccSubcat===c.id?'active':''}" onclick="setAccSubcat('${c.id}')">${c.label}</button>`).join('');}
+  function renderDigitalSubNav(){let types=[{id:"all",label:"All"},{id:"steam",label:"🎮 Steam"},{id:"netflix",label:"📺 Netflix"},{id:"xbox",label:"🎮 Xbox"}];document.getElementById('digitalSubNav').innerHTML=types.map(t=>`<button class="subcat-btn ${currentDigType===t.id?'active':''}" onclick="setDigType('${t.id}')">${t.label}</button>`).join('');}
+  function setAccSubcat(s){currentAccSubcat=s;renderAccessories();renderAccessoriesSubNav();}
+  function setDigType(t){currentDigType=t;renderDigital();renderDigitalSubNav();}
+  function filterAccessories(){accSearchTerm=document.getElementById('accSearch')?.value.toLowerCase()||'';renderAccessories();}
+  function filterDigital(){digSearchTerm=document.getElementById('digSearch')?.value.toLowerCase()||'';renderDigital();}
+  function renderCartPage(){let container=document.getElementById('cartPageContainer');if(!cart.length){container.innerHTML='<div style="text-align:center;"><h3>Cart empty</h3><button class="btn-primary" onclick="navigateTo(\'home\')">Shop now</button></div>';return;}let total=cart.reduce((a,i)=>a+i.price*i.qty,0);container.innerHTML=`<h2>Your Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;background:var(--s1);margin:10px 0;padding:16px;border-radius:16px;"><div><span style="font-size:28px;">${i.icon}</span> <strong>${i.name}</strong></div><div><button class="abtn" onclick="updateQty(${i.id},-1)">-</button><span style="margin:0 12px;">${i.qty}</span><button class="abtn" onclick="updateQty(${i.id},1)">+</button><button class="abtn" style="background:var(--red);margin-left:12px;" onclick="removeFromCart(${i.id})">🗑️</button></div><div class="pc-price">$${(i.price*i.qty).toFixed(2)}</div></div>`).join('')}<div style="text-align:right;margin-top:24px;"><h3>Total: $${total.toFixed(2)}</h3><button class="btn-primary" onclick="navigateTo('success');cart=[];saveCart();renderCartPage();">Place Order</button></div>`;}
+  
+  // Generate Support Pages Dynamically
+  const supportPages = [
+    {id:"helpcenter", title:"💬 Help Center", content:"<p>Welcome to GearZone Help Center. Our support team is available 24/7 via live chat and email. Average response time: under 2 minutes.</p><br><p><strong>Live Chat:</strong> Click the chat icon bottom right<br><strong>Email:</strong> support@gearzone.com<br><strong>Hours:</strong> 24/7</p>"},
+    {id:"shipping", title:"🚚 Shipping Info", content:"<p>We ship worldwide with tracking. Standard delivery: 5-10 business days. Express: 2-4 business days. Free shipping on orders over $50.</p><br><p><strong>USA/Canada:</strong> 3-7 days<br><strong>Europe:</strong> 5-10 days<br><strong>Rest of world:</strong> 7-14 days</p>"},
+    {id:"returns", title:"🔄 Returns Policy", content:"<p>30-day hassle-free returns on physical products. Digital items (Steam/Netflix keys) are non-refundable but replaced within 24h if faulty.</p><br><p>To start a return: contact support with your order number. Prepaid label provided.</p>"},
+    {id:"trackorder", title:"📦 Track Order", content:"<p>Enter your order number and email to track your shipment. Tracking links are sent via email after dispatch.</p><br><div style='display:flex;gap:10px;'><input id='trackInput' placeholder='Order #NG-XXXX' class='search-input'><button class='btn-primary' onclick='showToast(\"Demo: Order shipped, tracking: USPS\")'>Track</button></div>"},
+    {id:"contact", title:"📞 Contact Us", content:"<p><strong>Email:</strong> support@gearzone.com<br><strong>WhatsApp:</strong> +1 234 567 8900<br><strong>Live Chat:</strong> Available 24/7<br><strong>Address:</strong> 123 Gaming Ave, California, USA</p><br><button class='btn-primary' onclick='showToast(\"Support ticket opened! Response within 2h\")'>Open Ticket</button>"},
+    {id:"about", title:"🏢 About Us", content:"<p>GearZone was founded in 2020 by passionate gamers. We deliver premium gaming gear and digital services to over 14,000 customers worldwide. Our mission: level up your setup with the best gear at fair prices.</p>"},
+    {id:"careers", title:"💼 Careers", content:"<p>Join the GearZone team! We're looking for support specialists, warehouse associates, and marketing experts. Send your resume to careers@gearzone.com</p>"},
+    {id:"press", title:"📰 Press", content:"<p>Media inquiries: press@gearzone.com<br>Check our latest features in TechCrunch, IGN, and Wired.</p>"},
+    {id:"blog", title:"📝 Blog", content:"<p>Latest articles: 'Top 10 Gaming Mice 2026', 'How to Get CS2 Prime', 'Best Anime Figures of the Year'. Stay tuned for updates!</p>"},
+    {id:"privacy", title:"🔒 Privacy Policy", content:"<p>We collect only data needed to process orders. Payment processed via Stripe. We never sell your personal data. Cookies used only for cart functionality.</p>"},
+    {id:"terms", title:"📜 Terms of Service", content:"<p>By using GearZone you agree to our terms. Digital keys are for personal use only. All products are sourced from authorized distributors.</p>"},
+    {id:"cookie", title:"🍪 Cookie Policy", content:"<p>We use essential cookies for cart and session management. No advertising cookies without consent. You can disable cookies in browser settings.</p>"}
+  ];
+  
+  function createSupportPages(){
+    let container = document.getElementById('supportPagesContainer');
+    if(!container) return;
+    container.innerHTML = '';
+    supportPages.forEach(page => {
+      let div = document.createElement('div');
+      div.className = 'pg';
+      div.id = `pg-${page.id}`;
+      div.innerHTML = `<div class="wrap" style="padding:40px 0;"><div class="category-header"><h1 class="category-title">${page.title}</h1></div><div style="background:var(--s1);border-radius:24px;padding:40px;border:1px solid var(--border);">${page.content}</div></div>`;
+      container.appendChild(div);
+    });
+  }
+  
+  function navigateTo(page){
+    let allPages = ['home','accessories','digital','cart','success','helpcenter','shipping','returns','trackorder','contact','about','careers','press','blog','privacy','terms','cookie'];
+    allPages.forEach(p => {
+      let el = document.getElementById(`pg-${p}`);
+      if(el) el.classList.remove('on');
+    });
+    let target = document.getElementById(`pg-${page}`);
+    if(target) target.classList.add('on');
+    else if(page==='help') navigateTo('helpcenter');
+    else navigateTo('home');
+    window.scrollTo(0,0);
+    if(page==='accessories'){renderAccessories();renderAccessoriesSubNav();}
+    if(page==='digital'){renderDigital();renderDigitalSubNav();}
+    document.querySelectorAll('.nbtn').forEach(btn=>btn.classList.remove('active'));
+  }
+  
+  createSupportPages();
+  renderHome();
+  renderAccessories();
+  renderDigital();
+  renderAccessoriesSubNav();
+  renderDigitalSubNav();
+  renderCart();
+  window.setAccSubcat=setAccSubcat; window.setDigType=setDigType; window.filterAccessories=filterAccessories; window.filterDigital=filterDigital; window.updateQty=updateQty; window.navigateTo=navigateTo;
 </script>
 </body>
 </html>
