@@ -1,117 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>GearZone | Gaming Gear & Digital Services</title>
-<meta name="description" content="Best gaming mouse, mechanical keyboard, gaming headset, Steam accounts, Netflix subscriptions, anime figures. Shop GearZone for top brands.">
-<meta name="keywords" content="gaming mouse, mechanical keyboard, gaming headset, steam account, netflix account, anime figures, best gaming mic, best xbox one accessories, best gaming pc config, best 3d printed figures">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#05070c; --s1:#0b1018; --s2:#121826;
-  --acc:#00e6ff; --red:#ff3366; --gold:#ffcc33; --green:#00e68a;
-  --purple:#b77cff; --steam:#4dc3ff; --nf:#e50914;
-  --txt:#eef3fc; --muted:#6a7c9e; --border:rgba(0,230,255,.12);
-  --glow:0 0 20px rgba(0,230,255,.2);
-  --HDR:64px; --SWB:52px;
-  --D:'Bebas Neue',cursive; --F:'DM Sans',sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--txt);font-family:var(--F);overflow-x:hidden;}
-::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--acc);}
-button,a{cursor:pointer;font-family:var(--F);text-decoration:none;color:inherit;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>GearZone | Best Gaming Gear & Digital Services</title>
+  <meta name="description" content="Best gaming mouse, mechanical keyboard, gaming headset, Steam accounts, Netflix subscriptions, anime figures. GearZone official store.">
+  <meta name="keywords" content="gaming mouse, mechanical keyboard, gaming headset, steam account, netflix account, anime figures, best gaming mic, best xbox one accessories, best gaming pc config, best 3d printed figures">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:#05070c;color:#eef3fc;font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+    :root{
+      --bg:#05070c; --s1:#0b1018; --s2:#121826;
+      --acc:#00e6ff; --red:#ff3366; --gold:#ffcc33; --green:#00e68a;
+      --purple:#b77cff; --steam:#4dc3ff; --nf:#e50914;
+      --txt:#eef3fc; --muted:#6a7c9e; --border:rgba(0,230,255,.12);
+      --glow:0 0 20px rgba(0,230,255,.2);
+      --HDR:64px; --SWB:52px;
+      --D:'Bebas Neue',cursive; --F:'DM Sans',sans-serif;
+    }
+    button,a{cursor:pointer;font-family:var(--F);text-decoration:none;color:inherit;}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--acc);color:#000;padding:8px 22px;border-radius:40px;font-weight:700;font-size:13px;z-index:9999;opacity:0;transition:.2s;pointer-events:none;}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+    .ov{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:700;display:none;}
+    .ov.show{display:block;}
 
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--acc);color:#000;padding:8px 22px;border-radius:40px;font-weight:700;font-size:13px;z-index:9999;opacity:0;transition:.2s;pointer-events:none;}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-.ov{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:700;display:none;}
-.ov.show{display:block;}
+    header{position:fixed;top:0;left:0;right:0;z-index:600;background:rgba(5,7,12,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);height:var(--HDR);}
+    .hdr{max-width:1500px;margin:auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:12px;}
+    .logo{font-family:var(--D);font-size:28px;letter-spacing:2px;background:linear-gradient(135deg,var(--acc),var(--steam));-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:10px;white-space:nowrap;}
+    .logo span{color:var(--red);font-style:normal;}
+    .hnav{display:flex;gap:6px;flex-wrap:wrap;}
+    .nbtn{padding:8px 14px;background:transparent;border:none;color:var(--muted);font-weight:600;font-size:13px;border-radius:30px;transition:.2s;}
+    .nbtn:hover{color:var(--acc);background:rgba(0,230,255,.08);}
+    .hdr-r{margin-left:auto;display:flex;gap:10px;}
+    .ibtn{width:42px;height:42px;border-radius:12px;border:1px solid var(--border);background:transparent;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);position:relative;}
+    .ibtn:hover{border-color:var(--acc);color:var(--acc);}
+    .bge{position:absolute;top:-5px;right:-5px;background:var(--red);color:#fff;font-size:9px;min-width:17px;height:17px;border-radius:30px;display:flex;align-items:center;justify-content:center;font-weight:700;}
 
-header{position:fixed;top:0;left:0;right:0;z-index:600;background:rgba(5,7,12,.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);height:var(--HDR);}
-.hdr{max-width:1500px;margin:auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:12px;}
-.logo{font-family:var(--D);font-size:28px;letter-spacing:2px;background:linear-gradient(135deg,var(--acc),var(--steam));-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:10px;white-space:nowrap;}
-.logo span{color:var(--red);font-style:normal;}
-.hnav{display:flex;gap:6px;flex-wrap:wrap;}
-.nbtn{padding:8px 14px;background:transparent;border:none;color:var(--muted);font-weight:600;font-size:13px;border-radius:30px;transition:.2s;}
-.nbtn:hover{color:var(--acc);background:rgba(0,230,255,.08);}
-.hdr-r{margin-left:auto;display:flex;gap:10px;}
-.ibtn{width:42px;height:42px;border-radius:12px;border:1px solid var(--border);background:transparent;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);position:relative;}
-.ibtn:hover{border-color:var(--acc);color:var(--acc);}
-.bge{position:absolute;top:-5px;right:-5px;background:var(--red);color:#fff;font-size:9px;min-width:17px;height:17px;border-radius:30px;display:flex;align-items:center;justify-content:center;font-weight:700;}
+    .swb{position:fixed;top:var(--HDR);left:0;right:0;z-index:599;background:rgba(8,12,22,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:var(--SWB);}
+    .swb-inner{max-width:1500px;margin:auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:12px;}
+    .mode-tab{display:flex;align-items:center;gap:8px;padding:0 24px;height:100%;border:none;background:transparent;font-weight:700;font-size:15px;color:var(--muted);border-bottom:3px solid transparent;transition:.2s;}
+    .mode-tab.on{color:var(--acc);border-bottom-color:var(--acc);}
+    .swb-hint{font-size:12px;color:var(--muted);margin-left:12px;}
 
-.swb{position:fixed;top:var(--HDR);left:0;right:0;z-index:599;background:rgba(8,12,22,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:var(--SWB);}
-.swb-inner{max-width:1500px;margin:auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:12px;}
-.mode-tab{display:flex;align-items:center;gap:8px;padding:0 24px;height:100%;border:none;background:transparent;font-weight:700;font-size:15px;color:var(--muted);border-bottom:3px solid transparent;transition:.2s;}
-.mode-tab.on{color:var(--acc);border-bottom-color:var(--acc);}
-.swb-hint{font-size:12px;color:var(--muted);margin-left:12px;}
+    .cat-drop{position:fixed;top:calc(var(--HDR) + var(--SWB));left:0;right:0;z-index:598;background:rgba(8,12,22,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .cat-drop.open{max-height:380px;}
+    .cat-drop-inner{max-width:1500px;margin:auto;padding:20px 24px;}
+    .cat-drop-lbl{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--acc);margin-bottom:12px;}
+    .cat-grid{display:flex;flex-wrap:wrap;gap:12px;}
+    .cat-card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:12px 24px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:.2s;}
+    .cat-card:hover{transform:translateY(-2px);border-color:var(--acc);background:var(--s2);}
+    .cat-icon{font-size:26px;}
+    .cat-name{font-weight:700;font-size:14px;}
+    .cat-close-ov{position:fixed;inset:0;z-index:597;display:none;}
+    .cat-close-ov.show{display:block;}
 
-.cat-drop{position:fixed;top:calc(var(--HDR) + var(--SWB));left:0;right:0;z-index:598;background:rgba(8,12,22,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .3s ease;}
-.cat-drop.open{max-height:380px;}
-.cat-drop-inner{max-width:1500px;margin:auto;padding:20px 24px;}
-.cat-drop-lbl{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--acc);margin-bottom:12px;}
-.cat-grid{display:flex;flex-wrap:wrap;gap:12px;}
-.cat-card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:12px 24px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:.2s;}
-.cat-card:hover{transform:translateY(-2px);border-color:var(--acc);background:var(--s2);}
-.cat-icon{font-size:26px;}
-.cat-name{font-weight:700;font-size:14px;}
-.cat-close-ov{position:fixed;inset:0;z-index:597;display:none;}
-.cat-close-ov.show{display:block;}
+    .cart-d{position:fixed;right:0;top:0;bottom:0;width:380px;background:var(--s1);border-left:1px solid var(--border);z-index:800;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;}
+    .cart-d.show{transform:translateX(0);}
+    .chead{padding:20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;}
+    .cbody{flex:1;overflow-y:auto;padding:16px;}
+    .citem{display:flex;gap:12px;background:var(--s2);border-radius:12px;padding:12px;margin-bottom:10px;}
+    .cinf{flex:1;}
+    .cname{font-weight:600;font-size:13px;}
+    .cprice{font-family:var(--D);font-size:18px;color:var(--acc);}
+    .cfoot{padding:18px;border-top:1px solid var(--border);}
+    .btnfull{width:100%;padding:12px;background:var(--acc);color:#000;font-weight:700;border:none;border-radius:12px;}
 
-.cart-d{position:fixed;right:0;top:0;bottom:0;width:380px;background:var(--s1);border-left:1px solid var(--border);z-index:800;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;}
-.cart-d.show{transform:translateX(0);}
-.chead{padding:20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;}
-.cbody{flex:1;overflow-y:auto;padding:16px;}
-.citem{display:flex;gap:12px;background:var(--s2);border-radius:12px;padding:12px;margin-bottom:10px;}
-.cinf{flex:1;}
-.cname{font-weight:600;font-size:13px;}
-.cprice{font-family:var(--D);font-size:18px;color:var(--acc);}
-.cfoot{padding:18px;border-top:1px solid var(--border);}
-.btnfull{width:100%;padding:12px;background:var(--acc);color:#000;font-weight:700;border:none;border-radius:12px;}
+    .pg{display:none;min-height:100vh;padding-top:calc(var(--HDR) + var(--SWB));}
+    .pg.on{display:block;}
+    .wrap{max-width:1500px;margin:auto;padding:0 24px;}
 
-.pg{display:none;min-height:100vh;padding-top:calc(var(--HDR) + var(--SWB));}
-.pg.on{display:block;}
-.wrap{max-width:1500px;margin:auto;padding:0 24px;}
+    .hero{min-height:70vh;display:flex;align-items:center;background:radial-gradient(ellipse at 30% 40%, rgba(0,230,255,.04), transparent);}
+    .hero-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+    .h-t{font-family:var(--D);font-size:clamp(48px,8vw,88px);line-height:.92;margin-bottom:20px;}
+    .h-t i{color:var(--acc);}
+    .h-p{color:var(--muted);margin-bottom:28px;}
+    .h-btns{display:flex;gap:14px;}
+    .btn-primary{padding:14px 32px;background:var(--acc);border:none;border-radius:40px;font-weight:700;color:#000;transition:.2s;}
+    .btn-primary:hover{background:#00cce6;transform:translateY(-2px);}
+    .btn-outline{padding:14px 32px;background:transparent;border:1px solid var(--border);border-radius:40px;font-weight:700;}
+    .trust{background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 24px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
+    .sec-hd{display:flex;justify-content:space-between;align-items:flex-end;margin:48px 0 24px;}
+    .sec-h{font-family:var(--D);font-size:38px;}
+    .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;}
+    .pc{background:var(--s1);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:.2s;}
+    .pc:hover{transform:translateY(-4px);border-color:var(--acc);}
+    .pc-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--s2);}
+    .pc-b{padding:14px;}
+    .pc-name{font-weight:700;font-size:14px;margin-bottom:6px;}
+    .pc-price{font-family:var(--D);font-size:22px;color:var(--acc);}
+    .abtn{background:var(--acc);border:none;width:34px;height:34px;border-radius:8px;font-size:18px;color:#000;cursor:pointer;transition:.2s;}
+    .abtn:hover{transform:scale(1.05);}
 
-.hero{min-height:75vh;display:flex;align-items:center;background:radial-gradient(ellipse at 30% 40%, rgba(0,230,255,.04), transparent);}
-.hero-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-.h-t{font-family:var(--D);font-size:clamp(48px,8vw,88px);line-height:.92;margin-bottom:20px;}
-.h-t i{color:var(--acc);}
-.h-p{color:var(--muted);margin-bottom:28px;}
-.h-btns{display:flex;gap:14px;}
-.btn-primary{padding:14px 32px;background:var(--acc);border:none;border-radius:40px;font-weight:700;color:#000;}
-.btn-outline{padding:14px 32px;background:transparent;border:1px solid var(--border);border-radius:40px;font-weight:700;}
-.trust{background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 24px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
-.sec-hd{display:flex;justify-content:space-between;align-items:flex-end;margin:48px 0 24px;}
-.sec-h{font-family:var(--D);font-size:38px;}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;}
-.pc{background:var(--s1);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:.2s;}
-.pc:hover{transform:translateY(-4px);border-color:var(--acc);}
-.pc-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:52px;background:var(--s2);}
-.pc-b{padding:14px;}
-.pc-name{font-weight:700;font-size:14px;}
-.pc-price{font-family:var(--D);font-size:22px;color:var(--acc);}
-.abtn{background:var(--acc);border:none;width:34px;height:34px;border-radius:8px;font-size:18px;color:#000;}
-
-.search-bar{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap;}
-.search-input{flex:1;background:var(--s1);border:1px solid var(--border);border-radius:50px;padding:12px 20px;color:var(--txt);font-size:14px;outline:none;}
-.search-input:focus{border-color:var(--acc);}
-.subcat-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
-.subcat{background:var(--s1);border:1px solid var(--border);border-radius:40px;padding:8px 24px;font-size:13px;font-weight:600;cursor:pointer;}
-.subcat.on{background:var(--acc);color:#000;border-color:var(--acc);}
-
-.stream-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:20px;}
-.stream-card{background:var(--s1);border-radius:20px;padding:18px;border:1px solid var(--border);transition:.2s;}
-.stream-card:hover{border-color:var(--acc);}
-.steam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
-.faq-i{border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
-.faq-q{padding:16px;font-weight:700;display:flex;justify-content:space-between;cursor:pointer;}
-.faq-a{max-height:0;overflow:hidden;transition:.25s;padding:0 16px;color:var(--muted);}
-.faq-i.op .faq-a{max-height:200px;padding:0 16px 16px;}
-footer{background:var(--s1);border-top:1px solid var(--border);margin-top:60px;padding:40px 24px 20px;}
-.ft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1500px;margin:auto;}
-@media (max-width:800px){.hero-in{grid-template-columns:1fr;}.cart-d{width:100%;}}
-</style>
+    .search-bar{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap;}
+    .search-input{flex:1;background:var(--s1);border:1px solid var(--border);border-radius:50px;padding:12px 20px;color:var(--txt);font-size:14px;outline:none;}
+    .search-input:focus{border-color:var(--acc);}
+    .subcat-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+    .subcat{background:var(--s1);border:1px solid var(--border);border-radius:40px;padding:8px 24px;font-size:13px;font-weight:600;cursor:pointer;transition:.2s;}
+    .subcat.on{background:var(--acc);color:#000;border-color:var(--acc);}
+    .stream-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:20px;}
+    .stream-card{background:var(--s1);border-radius:20px;padding:18px;border:1px solid var(--border);transition:.2s;}
+    .stream-card:hover{border-color:var(--acc);}
+    .faq-i{border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
+    .faq-q{padding:16px;font-weight:700;display:flex;justify-content:space-between;cursor:pointer;}
+    .faq-a{max-height:0;overflow:hidden;transition:.25s;padding:0 16px;color:var(--muted);}
+    .faq-i.op .faq-a{max-height:200px;padding:0 16px 16px;}
+    footer{background:var(--s1);border-top:1px solid var(--border);margin-top:60px;padding:40px 24px 20px;}
+    .ft-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;max-width:1500px;margin:auto;}
+    @media (max-width:800px){.hero-in{grid-template-columns:1fr;}.cart-d{width:100%;}}
+  </style>
 </head>
 <body>
 <div class="toast" id="toast"></div>
@@ -131,79 +129,115 @@ footer{background:var(--s1);border-top:1px solid var(--border);margin-top:60px;p
 <div class="pg on" id="pg-home"><div class="hero"><div class="wrap hero-in"><div><div class="h-t">GEAR UP<br><i>DOMINATE</i><br>THE GAME</div><p class="h-p">Best gaming mice, mechanical keyboards, headsets, Steam accounts & Netflix subscriptions. Pro-level gear.</p><div class="h-btns"><button class="btn-primary" onclick="switchMode('acc')">Shop Accessories</button><button class="btn-primary" style="background:var(--steam);" onclick="switchMode('dig')">Digital Deals</button></div></div><div>⭐ 14,000+ Gamers Trust Us ⭐</div></div></div><div class="trust"><span>🏆 Best Gaming Mouse 2026</span><span>🎧 Top Rated Headset</span><span>⚡ Steam & Netflix Instant</span><span>🔒 30-Day Returns</span></div>
 <div class="wrap"><div class="sec-hd"><div class="sec-h">🔥 Bestsellers</div><button class="btn-outline" onclick="go('shop')">View All →</button></div><div class="pgrid" id="homeGrid"></div></div></div>
 
-<!-- ACCESSORIES SHOP -->
+<!-- ACCESSORIES SHOP (PC Accessories) -->
 <div class="pg" id="pg-shop"><div class="wrap"><div class="sec-hd"><div class="sec-h">🖱️ PC ACCESSORIES</div></div><div class="search-bar"><input type="text" id="shopSearch" class="search-input" placeholder="🔍 Search gaming mouse, mechanical keyboard, headset, mic, anime figure..."><button class="btn-primary" onclick="filterShop()">Search</button></div><div id="shopSubcats" class="subcat-tabs"></div><div id="shopGrid" class="pgrid"></div></div></div>
 
-<!-- DIGITAL PAGE -->
+<!-- DIGITAL SERVICES PAGE -->
 <div class="pg" id="pg-digital"><div class="wrap"><div class="sec-hd"><div class="sec-h">💎 DIGITAL SERVICES</div></div><div class="search-bar"><input type="text" id="digSearch" class="search-input" placeholder="🔍 Steam accounts, Netflix, CS2 prime, game keys..."><button class="btn-primary" onclick="filterDigital()">Search</button></div><div id="digSubcats" class="subcat-tabs"></div><div id="digitalContent"></div></div></div>
 
-<!-- HELP -->
+<!-- HELP & FAQ -->
 <div class="pg" id="pg-help"><div class="wrap"><div class="sec-hd"><div class="sec-h">💬 HELP CENTER</div></div><div class="pgrid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin-bottom:40px;"><div class="pc"><div class="pc-img">💬</div><div class="pc-b"><div class="pc-name">24/7 Live Chat</div><button class="btn-primary" style="width:100%;margin-top:10px;">Start Chat</button></div></div><div class="pc"><div class="pc-img">📧</div><div class="pc-b"><div class="pc-name">Email Support</div><button class="btn-primary" style="width:100%;margin-top:10px;">Contact</button></div></div><div class="pc"><div class="pc-img">🔄</div><div class="pc-b"><div class="pc-name">Returns & Refunds</div><button class="btn-primary" style="width:100%;margin-top:10px;" onclick="go('returns')">Policy</button></div></div></div><div class="sec-hd"><div class="sec-h">❓ FAQ</div></div><div id="faqList"></div></div></div>
 
-<!-- RETURNS LEGAL SIMPLIFIED -->
-<div class="pg" id="pg-returns"><div class="wrap"><div class="sec-h"><h2>🔁 30-Day Returns Guarantee</h2></div><p>Physical items: return within 30 days. Digital keys (Steam/Netflix) non-refundable but replaced if faulty within 24h.</p></div></div>
+<!-- RETURNS -->
+<div class="pg" id="pg-returns"><div class="wrap"><div class="sec-h"><h2>🔁 30-Day Returns Guarantee</h2></div><p style="margin:20px 0">Physical items: return within 30 days. Digital keys (Steam/Netflix) non-refundable but replaced if faulty within 24h.</p><p><strong>Digital items policy:</strong> Steam accounts are delivered instantly via email. Netflix subscriptions are activated within 5 minutes.</p></div></div>
+
+<!-- CART PAGE -->
 <div class="pg" id="pg-cart"><div class="wrap" style="padding:40px 0;"><div id="cartPageContainer"></div></div></div>
-<div class="pg" id="pg-success"><div class="wrap" style="text-align:center;padding:80px 0;"><div style="font-size:80px;">🎉</div><h2>Order Confirmed!</h2><p>Thank you — digital items sent to email.</p><button class="btn-primary" onclick="go('home')">Continue Shopping</button></div></div>
+
+<!-- SUCCESS -->
+<div class="pg" id="pg-success"><div class="wrap" style="text-align:center;padding:80px 0;"><div style="font-size:80px;">🎉</div><h2>Order Confirmed!</h2><p>Thank you — digital items sent to email. Accessories shipped within 24h.</p><button class="btn-primary" onclick="go('home')">Continue Shopping</button></div></div>
 
 <footer><div class="ft-grid"><div><div class="logo">GEARZONE</div><p style="font-size:12px;color:var(--muted);">Best gaming gear & digital accounts</p></div><div><h5>Categories</h5><a onclick="go('shop')">Accessories</a><br><a onclick="go('digital')">Digital Services</a></div><div><h5>Support</h5><a onclick="go('help')">Help Center</a><br><a onclick="go('returns')">Returns</a></div><div><h5>© 2026 GearZone</h5></div></div></footer>
 
 <script>
-// PRODUCT DATA with SEO keywords embedded
-const ACCESSORIES = [
-  {id:1,name:"Ultralight Gaming Mouse",cat:"mouse",icon:"🖱️",price:49.99,keywords:"best gaming mouse best wireless gaming mouse best mouse for valorant best lightweight gaming mouse"},
-  {id:2,name:"Mechanical RGB Keyboard",cat:"keyboard",icon:"⌨️",price:89.99,keywords:"best mechanical keyboard best gaming keyboard best keyboard for fortnite best linear switches"},
-  {id:3,name:"Pro Gaming Headset 7.1",cat:"headset",icon:"🎧",price:99.99,keywords:"best gaming headset best headset for fps best surround sound headset best wireless gaming headset"},
-  {id:4,name:"USB Condenser Mic",cat:"mic",icon:"🎙️",price:79.99,keywords:"best gaming mic best microphone for gaming best usb mic for gaming best mic for streaming best blue yeti settings"},
-  {id:5,name:"Xbox Elite Controller",cat:"controller",icon:"🎮",price:129.99,keywords:"best xbox one controller best xbox elite controller best xbox series x accessories"},
-  {id:6,name:"Attack Shark X3 Mouse",cat:"mouse",icon:"🖱️",price:39.99,keywords:"best attack shark mouse best lightweight gaming mouse best mouse under $50"},
-  {id:7,name:"Razer BlackWidow Keyboard",cat:"keyboard",icon:"⌨️",price:139.99,keywords:"best razer keyboard best mechanical keyboard for gaming best keyboard for csgo"},
-  {id:8,name:"HyperX Cloud Headset",cat:"headset",icon:"🎧",price:79.99,keywords:"best hyperx headset best headset for footsteps best pc gaming headset"},
-  {id:9,name:"Shure MV7 Mic",cat:"mic",icon:"🎙️",price:249.99,keywords:"best shure mic for gaming best dynamic mic for gaming best microphone for discord"},
-  {id:10,name:"Glorious Model O",cat:"mouse",icon:"🖱️",price:59.99,keywords:"best glorious mouse best mouse for claw grip best lightweight gaming mouse"},
-  {id:11,name:"Logitech G Pro X Superlight",cat:"mouse",icon:"🖱️",price:149.99,keywords:"best g pro x superlight best logitech gaming mouse best wireless gaming mouse"},
-  {id:12,name:"SteelSeries Apex Pro",cat:"keyboard",icon:"⌨️",price:199.99,keywords:"best steelseries keyboard best mechanical keyboard best keyboard for valorant"},
-  {id:13,name:"Naruto Shippuden Figure",cat:"anime",icon:"🗿",price:69.99,keywords:"best anime figures best naruto figures best anime figurines best japanese anime figures"},
-  {id:14,name:"Goku Ultra Instinct Statue",cat:"anime",icon:"💛",price:89.99,keywords:"best dragon ball figures best anime statues best limited edition anime figures"},
-  {id:15,name:"Attack on Titan Levi",cat:"anime",icon:"⚔️",price:74.99,keywords:"best attack on titan figures best anime action figures"},
-  {id:16,name:"Gaming Chair Ergonomic",cat:"chair",icon:"🪑",price:199.99,keywords:"best gaming chair best xbox one gaming chair best pc gaming chair"},
-];
+  // ======================= DATA WITH SEO KEYWORDS =======================
+  const ACCESSORIES = [
+    {id:1,name:"Ultralight Gaming Mouse",cat:"mouse",icon:"🖱️",price:49.99,keywords:"best gaming mouse best wireless gaming mouse best mouse for valorant best lightweight gaming mouse best mouse for fps best g pro x superlight"},
+    {id:2,name:"Mechanical RGB Keyboard",cat:"keyboard",icon:"⌨️",price:89.99,keywords:"best mechanical keyboard best gaming keyboard best keyboard for fortnite best linear switches best keyboard for csgo best 60 percent keyboard"},
+    {id:3,name:"Pro Gaming Headset 7.1",cat:"headset",icon:"🎧",price:99.99,keywords:"best gaming headset best headset for fps best surround sound headset best wireless gaming headset best headset for footsteps best pc gaming headset"},
+    {id:4,name:"USB Condenser Gaming Mic",cat:"mic",icon:"🎙️",price:79.99,keywords:"best gaming mic best microphone for gaming best usb mic for gaming best mic for streaming best blue yeti settings best microphone for discord best dynamic mic for gaming"},
+    {id:5,name:"Xbox Elite Series 2",cat:"controller",icon:"🎮",price:129.99,keywords:"best xbox one controller best xbox elite controller best xbox series x accessories best xbox one accessories"},
+    {id:6,name:"Attack Shark X3 Ultra",cat:"mouse",icon:"🖱️",price:39.99,keywords:"best attack shark mouse best lightweight gaming mouse best mouse under $50 best wireless gaming mouse"},
+    {id:7,name:"Razer BlackWidow V4",cat:"keyboard",icon:"⌨️",price:139.99,keywords:"best razer keyboard best mechanical keyboard for gaming best keyboard for valorant best gaming keyboard"},
+    {id:8,name:"HyperX Cloud Alpha",cat:"headset",icon:"🎧",price:79.99,keywords:"best hyperx headset best headset for footsteps best pc gaming headset best headset with mic"},
+    {id:9,name:"Shure MV7 Dynamic Mic",cat:"mic",icon:"🎙️",price:249.99,keywords:"best shure mic for gaming best dynamic mic for gaming best microphone for pc gaming best xlr mic for gaming"},
+    {id:10,name:"Glorious Model O Wireless",cat:"mouse",icon:"🖱️",price:79.99,keywords:"best glorious mouse best mouse for claw grip best lightweight gaming mouse best mouse for fps"},
+    {id:11,name:"Logitech G Pro X Superlight",cat:"mouse",icon:"🖱️",price:149.99,keywords:"best g pro x superlight best logitech gaming mouse best wireless gaming mouse best mouse for valorant"},
+    {id:12,name:"SteelSeries Apex Pro",cat:"keyboard",icon:"⌨️",price:199.99,keywords:"best steelseries keyboard best mechanical keyboard best keyboard for csgo best gaming keyboard"},
+    {id:13,name:"Naruto Shippuden Figure",cat:"anime",icon:"🗿",price:69.99,keywords:"best anime figures best naruto figures best anime figurines best japanese anime figures best anime collectibles"},
+    {id:14,name:"Goku Ultra Instinct",cat:"anime",icon:"💛",price:89.99,keywords:"best dragon ball figures best anime statues best limited edition anime figures best 3d printed figures"},
+    {id:15,name:"Attack on Titan Levi",cat:"anime",icon:"⚔️",price:74.99,keywords:"best attack on titan figures best anime action figures best 3d printed action figures"},
+    {id:16,name:"Razer Kraken V3",cat:"headset",icon:"🎧",price:89.99,keywords:"best razer headset best wireless gaming headset best headset for gaming"},
+    {id:17,name:"Corsair K70 RGB",cat:"keyboard",icon:"⌨️",price:129.99,keywords:"best corsair keyboard best mechanical keyboard best keyboard for gaming"},
+    {id:18,name:"Gaming Chair Ergonomic",cat:"chair",icon:"🪑",price:199.99,keywords:"best gaming chair best xbox one gaming chair best pc gaming chair best racing style gaming chair"}
+  ];
 
-const DIGITAL_ITEMS = [
-  {id:101,name:"Steam Account - CS2 Prime Ready",type:"steam",icon:"🎮",price:24.99,keywords:"steam account cs2 prime account best steam games steam offline key"},
-  {id:102,name:"Steam Account - Elden Ring + DLC",type:"steam",icon:"⚔️",price:39.99,keywords:"elden ring steam account best rpg games steam games"},
-  {id:103,name:"Netflix Premium 4K Account - 1 Month",type:"netflix",icon:"📺",price:14.99,keywords:"netflix account netflix 4k account best netflix subscription"},
-  {id:104,name:"Netflix UHD 1 Year Subscription",type:"netflix",icon:"📺",price:119.99,keywords:"netflix 4k account best streaming service netflix gift card"},
-  {id:105,name:"Steam Wallet Code $50",type:"steam",icon:"💳",price:46.99,keywords:"steam wallet code steam gift card best steam games"},
-  {id:106,name:"Xbox Game Pass Ultimate 3 Months",type:"xbox",icon:"🎮",price:39.99,keywords:"best xbox game pass games best xbox one games xbox series x accessories"},
-  {id:107,name:"Steam Account - Baldur's Gate 3",type:"steam",icon:"🐉",price:44.99,keywords:"baldurs gate 3 steam account best rpg games best pc games"},
-  {id:108,name:"Netflix Family Plan 6 Months",type:"netflix",icon:"📺",price:69.99,keywords:"netflix account family plan best netflix subscription"},
-  {id:109,name:"CS2 Prime Status Upgrade",type:"steam",icon:"🔫",price:15.99,keywords:"cs2 prime account best steam games best shooting games"},
-  {id:110,name:"HBO Max Gift Card 3 Months",type:"streaming",icon:"🎬",price:24.99,keywords:"hbo max card best streaming service"},
-];
+  const DIGITAL_ITEMS = [
+    {id:101,name:"Steam Account - CS2 Prime Ready",type:"steam",icon:"🎮",price:24.99,keywords:"steam account cs2 prime account best steam games steam offline key cs2 prime status"},
+    {id:102,name:"Steam Account - Elden Ring + DLC",type:"steam",icon:"⚔️",price:39.99,keywords:"elden ring steam account best rpg games steam games best pc games"},
+    {id:103,name:"Netflix Premium 4K - 1 Month",type:"netflix",icon:"📺",price:14.99,keywords:"netflix account netflix 4k account best netflix subscription netflix gift card"},
+    {id:104,name:"Netflix UHD 1 Year Subscription",type:"netflix",icon:"📺",price:119.99,keywords:"netflix 4k account best streaming service netflix gift card family plan"},
+    {id:105,name:"Steam Wallet Code $50",type:"steam",icon:"💳",price:46.99,keywords:"steam wallet code steam gift card best steam games"},
+    {id:106,name:"Xbox Game Pass Ultimate 3 Months",type:"xbox",icon:"🎮",price:39.99,keywords:"best xbox game pass games best xbox one games xbox series x accessories"},
+    {id:107,name:"Steam Account - Baldur's Gate 3",type:"steam",icon:"🐉",price:44.99,keywords:"baldurs gate 3 steam account best rpg games best pc games"},
+    {id:108,name:"Netflix Family Plan 6 Months",type:"netflix",icon:"📺",price:69.99,keywords:"netflix account family plan best netflix subscription 4k account"},
+    {id:109,name:"CS2 Prime Status Upgrade",type:"steam",icon:"🔫",price:15.99,keywords:"cs2 prime account best steam games best shooting games"},
+    {id:110,name:"HBO Max Gift Card 3 Months",type:"streaming",icon:"🎬",price:24.99,keywords:"hbo max card best streaming service hbo subscription"},
+    {id:111,name:"Steam Account - Cyberpunk 2077",type:"steam",icon:"🌆",price:29.99,keywords:"cyberpunk steam account best open world games best pc games"}
+  ];
 
-let cart = JSON.parse(localStorage.getItem('gearzone_cart')) || [];
-let curMode = null;
-let currentShopFilter = "all";
-let shopSearchTerm = "";
-let digSearchTerm = "";
-let digitalTypeFilter = "all";
+  const FAQS = [
+    {q:"How fast do I get my Steam account?",a:"Instant delivery via email within 1-3 minutes after payment. You receive login credentials or key."},
+    {q:"Are Netflix accounts region-locked?",a:"Our Netflix accounts work worldwide. 4K UHD supported on premium plans."},
+    {q:"What if my digital key is invalid?",a:"Contact support within 24h — we replace faulty keys/accounts at no cost."},
+    {q:"How long does physical shipping take?",a:"5-10 business days internationally, express 2-4 days available."},
+    {q:"Are anime figures officially licensed?",a:"100% official from Bandai, Good Smile, Kotobukiya."}
+  ];
 
-function saveCart(){localStorage.setItem('gearzone_cart',JSON.stringify(cart));renderCart();}
-function addToCart(item){let ex=cart.find(i=>i.id===item.id);if(ex)ex.qty=(ex.qty||1)+1;else cart.push({...item,qty:1});saveCart();showToast(item.name+" added");}
-function removeFromCart(id){cart=cart.filter(i=>i.id!==id);saveCart();if(document.getElementById('cartPageContainer'))renderCartPage();}
-function updateQty(id,delta){let it=cart.find(i=>i.id===id);if(it){it.qty=Math.max(1,it.qty+delta);saveCart();if(document.getElementById('cartPageContainer'))renderCartPage();}}
-function renderCart(){let cnt=cart.reduce((s,i)=>s+i.qty,0);document.getElementById('cartCnt').innerText=cnt;let body=document.getElementById('cbody'),foot=document.getElementById('cfoot');if(!cart.length){body.innerHTML='<div class="cempty" style="text-align:center;padding:40px;">🛒 Empty</div>';foot.style.display='none';return;}foot.style.display='block';body.innerHTML=cart.map(i=>`<div class="citem"><div class="cicn">${i.icon}</div><div class="cinf"><div class="cname">${i.name}</div><div class="cprice">$${(i.price*i.qty).toFixed(2)}</div></div><button class="crm" onclick="removeFromCart(${i.id})">✕</button></div>`).join('');document.getElementById('ctotal').innerText='$'+cart.reduce((a,i)=>a+i.price*i.qty,0).toFixed(2);}
-function openCart(){document.getElementById('cart').classList.add('show');document.getElementById('ov').classList.add('show');}
-function closeCart(){document.getElementById('cart').classList.remove('show');document.getElementById('ov').classList.remove('show');}
-function showToast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
-function go(page){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));document.getElementById(`pg-${page}`).classList.add('on');window.scrollTo(0,0);if(page!=='home')closeCategory();}
-function switchMode(m){if(curMode===m){closeCategory();return;}curMode=m;document.getElementById('mt-acc').classList.toggle('on',m==='acc');document.getElementById('mt-dig').classList.toggle('on',m==='dig');document.getElementById('cd-acc').style.display=m==='acc'?'block':'none';document.getElementById('cd-dig').style.display=m==='dig'?'block':'none';document.getElementById('swbHint').style.display='none';document.getElementById('catDrop').classList.add('open');document.getElementById('catCloseOv').classList.add('show');loadCatGrids();}
-function closeCategory(){curMode=null;document.getElementById('mt-acc').classList.remove('on');document.getElementById('mt-dig').classList.remove('on');document.getElementById('catDrop').classList.remove('open');document.getElementById('catCloseOv').classList.remove('show');document.getElementById('swbHint').style.display='';}
-function loadCatGrids(){let accList=document.getElementById('accCatList');if(accList){let cats=[{name:"Gaming Mice",icon:"🖱️",filter:"mouse"},{name:"Keyboards",icon:"⌨️",filter:"keyboard"},{name:"Headsets",icon:"🎧",filter:"headset"},{name:"Microphones",icon:"🎙️",filter:"mic"},{name:"Anime Figures",icon:"🗿",filter:"anime"},{name:"Controllers",icon:"🎮",filter:"controller"}];accList.innerHTML=cats.map(c=>`<div class="cat-card" onclick="go('shop');filterShopCat('${c.filter}');closeCategory();"><span class="cat-icon">${c.icon}</span><span class="cat-name">${c.name}</span></div>`).join('');}let digList=document.getElementById('digCatList');if(digList){let dCats=[{name:"Steam Accounts",icon:"🎮",type:"steam"},{name:"Netflix Subscriptions",icon:"📺",type:"netflix"},{name:"Xbox Game Pass",icon:"🎮",type:"xbox"}];digList.innerHTML=dCats.map(c=>`<div class="cat-card" onclick="go('digital');filterDigitalType('${c.type}');closeCategory();"><span class="cat-icon">${c.icon}</span><span class="cat-name">${c.name}</span></div>`).join('');}}
-function filterShopCat(cat){currentShopFilter=cat;renderShop();}
-function filterShop(){shopSearchTerm=document.getElementById('shopSearch')?.value.toLowerCase()||'';renderShop();}
-function renderShop(){let filtered=ACCESSORIES.filter(p=>{if(currentShopFilter!=='all' && p.cat!==currentShopFilter) return false;if(shopSearchTerm){let kw=(p.name+' '+p.keywords).toLowerCase();return kw.includes(shopSearchTerm);}return true;});document.getElementById('shopGrid').innerHTML=filtered.map(p=>`<div class="pc"><div class="pc-img">${p.icon}</div><div class="pc-b"><div class="pc-name">${p.name}</div><div class="pc-price">$${p.price}</div><button class="abtn" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>+</button></div></div>`).join('');let catsAll=[{id:"all",label:"All"},{id:"mouse",label:"🖱️ Mice"},{id:"keyboard",label:"⌨️ Keyboards"},{id:"headset",label:"🎧 Headsets"},{id:"mic",label:"🎙️ Mics"},{id:"anime",label:"🗿 Anime Figures"},{id:"controller",label:"🎮 Controllers"}];document.getElementById('shopSubcats').innerHTML=catsAll.map(c=>`<div class="subcat ${currentShopFilter===c.id?'on':''}" onclick="currentShopFilter='${c.id}';renderShop();">${c.label}</div>`).join('');}
-function filterDigital(){digSearchTerm=document.getElementById('digSearch')?.value.toLowerCase()||'';renderDigital();}
-function filterDigitalType(type){digitalTypeFilter=type;renderDigital();}
-function renderDigital(){let filtered=DIGITAL_ITEMS.filter(d=>{if(digitalTypeFilter!=='all' && d.type!==digitalTypeFilter) return false;if(digSearchTerm){let kw=(d.name+' '+d.keywords).toLowerCase();return kw.includes(digSearchTerm);}return true;});let container=document.getElementById('digitalContent');container.innerHTML=`<div class="stream-grid">${filtered.map(d=>`<div class="stream-card"><div style="font-size:44px;">${d.icon}</div><div style="font-weight:700;">${d.name}</div><div class="pc-price">$${d.price}</div><button class="btn-primary" style="margin-top:12px;padding:8px;" onclick='addToCart({id:${d.id},name:"${d.name.replace(/'/g,"\\'")}",price:${d.price},icon:"${d.icon}"})'>Add to Cart</button></div>`).join('')}</div>`;let tabs=[{id:"all",label:"All Digital"},{id:"steam",label:"🎮 Steam"},{id:"netflix",label:"📺 Netflix"},{id:"xbox",label:"🎮 Xbox"}];document.getElementById('digSubcats').innerHTML=tabs.map(t=>`<div class="subcat ${digitalTypeFilter===t.id?'on':''}" onclick="digitalTypeFilter='${t.id}';renderDigital();">${t.label}</div>`).join('');}
-function renderCartPage(){let container=document.getElementById('cartPageContainer');if(!container)return;if(!cart.length){container.innerHTML='<div style="text-align:center;"><h3>Cart empty</h3><button class="btn-primary" onclick="go(\'home\')">Shop now</button></div>';return;}let total=cart.reduce((a,i)=>a+i.price*i.qty,0);container.innerHTML=`<h2>Your Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;background:var(--s1);margin:10px 0;padding:16px;border-radius:16px;"><div>${i.icon} ${i.name}</div><div><
+  let cart = JSON.parse(localStorage.getItem('gearzone_cart')) || [];
+  let curMode = null;
+  let currentShopFilter = "all";
+  let shopSearchTerm = "";
+  let digSearchTerm = "";
+  let digitalTypeFilter = "all";
+
+  function saveCart(){localStorage.setItem('gearzone_cart',JSON.stringify(cart));renderCart();}
+  function addToCart(item){let ex=cart.find(i=>i.id===item.id);if(ex)ex.qty=(ex.qty||1)+1;else cart.push({...item,qty:1});saveCart();showToast(item.name+" added");}
+  function removeFromCart(id){cart=cart.filter(i=>i.id!==id);saveCart();if(document.getElementById('cartPageContainer'))renderCartPage();}
+  function updateQty(id,delta){let it=cart.find(i=>i.id===id);if(it){it.qty=Math.max(1,it.qty+delta);saveCart();if(document.getElementById('cartPageContainer'))renderCartPage();}}
+  function renderCart(){let cnt=cart.reduce((s,i)=>s+i.qty,0);document.getElementById('cartCnt').innerText=cnt;let body=document.getElementById('cbody'),foot=document.getElementById('cfoot');if(!cart.length){body.innerHTML='<div style="text-align:center;padding:40px;">🛒 Empty</div>';foot.style.display='none';return;}foot.style.display='block';body.innerHTML=cart.map(i=>`<div class="citem"><div class="cicn">${i.icon}</div><div class="cinf"><div class="cname">${i.name}</div><div class="cprice">$${(i.price*i.qty).toFixed(2)}</div></div><button class="crm" style="background:none;border:none;font-size:20px;color:var(--muted);cursor:pointer;" onclick="removeFromCart(${i.id})">✕</button></div>`).join('');document.getElementById('ctotal').innerText='$'+cart.reduce((a,i)=>a+i.price*i.qty,0).toFixed(2);}
+  function openCart(){document.getElementById('cart').classList.add('show');document.getElementById('ov').classList.add('show');}
+  function closeCart(){document.getElementById('cart').classList.remove('show');document.getElementById('ov').classList.remove('show');}
+  function showToast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
+  function go(page){document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));document.getElementById(`pg-${page}`).classList.add('on');window.scrollTo(0,0);if(page!=='home')closeCategory();}
+  
+  function switchMode(m){if(curMode===m){closeCategory();return;}curMode=m;document.getElementById('mt-acc').classList.toggle('on',m==='acc');document.getElementById('mt-dig').classList.toggle('on',m==='dig');document.getElementById('cd-acc').style.display=m==='acc'?'block':'none';document.getElementById('cd-dig').style.display=m==='dig'?'block':'none';document.getElementById('swbHint').style.display='none';document.getElementById('catDrop').classList.add('open');document.getElementById('catCloseOv').classList.add('show');loadCatGrids();}
+  function closeCategory(){curMode=null;document.getElementById('mt-acc').classList.remove('on');document.getElementById('mt-dig').classList.remove('on');document.getElementById('catDrop').classList.remove('open');document.getElementById('catCloseOv').classList.remove('show');document.getElementById('swbHint').style.display='';}
+  
+  function loadCatGrids(){
+    let accList=document.getElementById('accCatList');
+    if(accList){let cats=[{name:"Gaming Mice",icon:"🖱️",filter:"mouse"},{name:"Keyboards",icon:"⌨️",filter:"keyboard"},{name:"Headsets",icon:"🎧",filter:"headset"},{name:"Microphones",icon:"🎙️",filter:"mic"},{name:"Anime Figures",icon:"🗿",filter:"anime"},{name:"Controllers",icon:"🎮",filter:"controller"}];accList.innerHTML=cats.map(c=>`<div class="cat-card" onclick="go('shop');filterShopCat('${c.filter}');closeCategory();"><span class="cat-icon">${c.icon}</span><span class="cat-name">${c.name}</span></div>`).join('');}
+    let digList=document.getElementById('digCatList');
+    if(digList){let dCats=[{name:"Steam Accounts",icon:"🎮",type:"steam"},{name:"Netflix Subscriptions",icon:"📺",type:"netflix"},{name:"Xbox Game Pass",icon:"🎮",type:"xbox"}];digList.innerHTML=dCats.map(c=>`<div class="cat-card" onclick="go('digital');filterDigitalType('${c.type}');closeCategory();"><span class="cat-icon">${c.icon}</span><span class="cat-name">${c.name}</span></div>`).join('');}
+  }
+  
+  function filterShopCat(cat){currentShopFilter=cat;renderShop();}
+  function filterShop(){shopSearchTerm=document.getElementById('shopSearch')?.value.toLowerCase()||'';renderShop();}
+  function renderShop(){let filtered=ACCESSORIES.filter(p=>{if(currentShopFilter!=='all' && p.cat!==currentShopFilter) return false;if(shopSearchTerm){let kw=(p.name+' '+p.keywords).toLowerCase();return kw.includes(shopSearchTerm);}return true;});document.getElementById('shopGrid').innerHTML=filtered.map(p=>`<div class="pc"><div class="pc-img">${p.icon}</div><div class="pc-b"><div class="pc-name">${p.name}</div><div class="pc-price">$${p.price}</div><button class="abtn" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>+</button></div></div>`).join('');let catsAll=[{id:"all",label:"All"},{id:"mouse",label:"🖱️ Mice"},{id:"keyboard",label:"⌨️ Keyboards"},{id:"headset",label:"🎧 Headsets"},{id:"mic",label:"🎙️ Mics"},{id:"anime",label:"🗿 Anime Figures"},{id:"controller",label:"🎮 Controllers"}];document.getElementById('shopSubcats').innerHTML=catsAll.map(c=>`<div class="subcat ${currentShopFilter===c.id?'on':''}" onclick="currentShopFilter='${c.id}';renderShop();">${c.label}</div>`).join('');}
+  
+  function filterDigital(){digSearchTerm=document.getElementById('digSearch')?.value.toLowerCase()||'';renderDigital();}
+  function filterDigitalType(type){digitalTypeFilter=type;renderDigital();}
+  function renderDigital(){let filtered=DIGITAL_ITEMS.filter(d=>{if(digitalTypeFilter!=='all' && d.type!==digitalTypeFilter) return false;if(digSearchTerm){let kw=(d.name+' '+d.keywords).toLowerCase();return kw.includes(digSearchTerm);}return true;});let container=document.getElementById('digitalContent');container.innerHTML=`<div class="stream-grid">${filtered.map(d=>`<div class="stream-card"><div style="font-size:44px;">${d.icon}</div><div style="font-weight:700;margin:8px 0;">${d.name}</div><div class="pc-price">$${d.price}</div><button class="btn-primary" style="margin-top:12px;padding:8px 20px;" onclick='addToCart({id:${d.id},name:"${d.name.replace(/'/g,"\\'")}",price:${d.price},icon:"${d.icon}"})'>Add to Cart</button></div>`).join('')}</div>`;let tabs=[{id:"all",label:"All Digital"},{id:"steam",label:"🎮 Steam"},{id:"netflix",label:"📺 Netflix"},{id:"xbox",label:"🎮 Xbox"}];document.getElementById('digSubcats').innerHTML=tabs.map(t=>`<div class="subcat ${digitalTypeFilter===t.id?'on':''}" onclick="digitalTypeFilter='${t.id}';renderDigital();">${t.label}</div>`).join('');}
+  
+  function renderCartPage(){let container=document.getElementById('cartPageContainer');if(!container)return;if(!cart.length){container.innerHTML='<div style="text-align:center;"><h3>Cart empty</h3><button class="btn-primary" onclick="go(\'home\')">Shop now</button></div>';return;}let total=cart.reduce((a,i)=>a+i.price*i.qty,0);container.innerHTML=`<h2>Your Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;align-items:center;background:var(--s1);margin:10px 0;padding:16px;border-radius:16px;"><div><span style="font-size:28px;">${i.icon}</span> <strong>${i.name}</strong></div><div><button class="abtn" onclick="updateQty(${i.id},-1)">-</button><span style="margin:0 12px;">${i.qty}</span><button class="abtn" onclick="updateQty(${i.id},1)">+</button><button class="abtn" style="background:var(--red);margin-left:12px;" onclick="removeFromCart(${i.id})">🗑️</button></div><div class="pc-price">$${(i.price*i.qty).toFixed(2)}</div></div>`).join('')}<div style="text-align:right;margin-top:24px;"><h3>Total: $${total.toFixed(2)}</h3><button class="btn-primary" onclick="placeMockOrder()">Proceed to Checkout</button></div>`;}
+  
+  function placeMockOrder(){if(cart.length){go('success');cart=[];saveCart();renderCartPage();showToast("Order placed! Thank you.");}}
+  
+  function renderHome(){let best=ACCESSORIES.slice(0,8);document.getElementById('homeGrid').innerHTML=best.map(p=>`<div class="pc"><div class="pc-img">${p.icon}</div><div class="pc-b"><div class="pc-name">${p.name}</div><div class="pc-price">$${p.price}</div><button class="abtn" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>+</button></div></div>`).join('');}
+  function renderFAQ(){document.getElementById('faqList').innerHTML=FAQS.map((f,i)=>`<div class="faq-i" id="faq${i}"><div class="faq-q" onclick="document.getElementById('faq${i}').classList.toggle('op')">${f.q}<span>▼</span></div><div class="faq-a">${f.a}</div></div>`).join('');}
+  
+  renderHome(); renderShop(); renderDigital(); renderFAQ(); renderCart();
+  window.filterShopCat=filterShopCat; window.filterShop=filterShop; window.filterDigital=filterDigital; window.filterDigitalType=filterDigitalType; window.updateQty=updateQty; window.placeMockOrder=placeMockOrder;
+</script>
+</body>
+</html>
