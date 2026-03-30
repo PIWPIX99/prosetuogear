@@ -1,0 +1,67 @@
+version: "3.8"
+
+# ══════════════════════════════════════════════
+#  NexusGear Store — WordPress + MySQL
+#  For Coolify deployment
+#  
+#  HOW TO USE:
+#  1. Paste this into Coolify → New Resource → Docker Compose
+#  2. Change the passwords below (DB_PASSWORD, MYSQL_ROOT_PASSWORD)
+#  3. Click Deploy
+#  4. Go to your domain/wp-admin to finish WordPress setup
+#  5. Upload nexusgear-store-v3.zip as a plugin
+# ══════════════════════════════════════════════
+
+services:
+
+  # ── MySQL Database ──────────────────────────
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE:      nexusgear_db
+      MYSQL_USER:          nexusgear_user
+      MYSQL_PASSWORD:      CHANGE_THIS_PASSWORD_123
+      MYSQL_ROOT_PASSWORD: CHANGE_ROOT_PASSWORD_456
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── WordPress ───────────────────────────────
+  wordpress:
+    image: wordpress:6.5-php8.2-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST:     db:3306
+      WORDPRESS_DB_NAME:     nexusgear_db
+      WORDPRESS_DB_USER:     nexusgear_user
+      WORDPRESS_DB_PASSWORD: CHANGE_THIS_PASSWORD_123
+
+      # Performance tweaks
+      WORDPRESS_TABLE_PREFIX: ng_
+      WORDPRESS_DEBUG:        0
+
+      # PHP settings for plugin uploads
+      PHP_UPLOAD_MAX_FILESIZE: 64M
+      PHP_POST_MAX_SIZE:       64M
+      PHP_MAX_EXECUTION_TIME:  300
+      PHP_MEMORY_LIMIT:        256M
+    volumes:
+      - wp_data:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    labels:
+      # Coolify proxy labels (auto-set by Coolify — leave as is)
+      - "traefik.enable=true"
+
+volumes:
+  db_data:
+  wp_data:
