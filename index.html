@@ -92,7 +92,17 @@
     .search-input{flex:1;background:var(--s1);border:1px solid var(--border);border-radius:50px;padding:12px 20px;color:var(--txt);font-size:14px;outline:none;}
     .search-input:focus{border-color:var(--acc);}
     
-    /* PRO FOOTER */
+    .page-content{background:var(--s1);border-radius:24px;padding:48px;border:1px solid var(--border);margin-bottom:40px;}
+    .page-content h2{font-family:var(--D);font-size:32px;color:var(--acc);margin-bottom:20px;}
+    .page-content h3{font-size:20px;margin:24px 0 12px;color:var(--gold);}
+    .page-content p{color:var(--muted);line-height:1.7;margin-bottom:16px;}
+    .page-content ul{list-style:none;margin:16px 0;}
+    .page-content ul li{padding:8px 0 8px 24px;position:relative;color:var(--muted);}
+    .page-content ul li:before{content:"▹";position:absolute;left:0;color:var(--acc);}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;}
+    .info-card{background:var(--s2);border-radius:20px;padding:24px;border:1px solid var(--border);}
+    .info-card h4{font-size:18px;margin-bottom:12px;color:var(--acc);}
+    
     .footer-pro{background:var(--s1);border-top:2px solid var(--border);margin-top:60px;}
     .footer-container{max-width:1500px;margin:0 auto;padding:60px 24px 40px;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
@@ -109,7 +119,7 @@
     .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
     .footer-bottom p{font-size:12px;color:var(--muted);}
     .payment-icons{display:flex;gap:12px;font-size:24px;}
-    @media (max-width:1000px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}.hero-in{grid-template-columns:1fr;}}
+    @media (max-width:1000px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}.hero-in{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr;}}
     @media (max-width:600px){.footer-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -138,60 +148,18 @@
   </div>
 </div>
 
-<!-- HOME PAGE with FULL PRODUCT GRID -->
+<!-- HOME PAGE -->
 <div class="pg on" id="pg-home">
-  <div class="hero">
-    <div class="wrap hero-in">
-      <div>
-        <div class="h-t">GEAR UP<br><i>DOMINATE</i><br>THE GAME</div>
-        <p class="h-p">Premium gaming mice, mechanical keyboards, headsets, microphones, controllers & anime figures. Level up your setup.</p>
-        <div class="h-btns">
-          <button class="btn-primary" onclick="navigateTo('shop')">Shop All</button>
-          <button class="btn-outline" onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})">View Products ↓</button>
-        </div>
-      </div>
-      <div style="text-align:center;background:rgba(0,230,255,.03);border-radius:30px;padding:20px;">
-        <div style="font-size:80px;">🎮</div>
-        <div style="font-size:14px;color:var(--acc);margin-top:10px;">⭐ 14,000+ Gamers Trust Us</div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="trust">
-    <span>🏆 Best Gaming Gear 2026</span>
-    <span>🎧 Top Rated Headsets</span>
-    <span>🚚 Free Shipping Over $50</span>
-    <span>🔒 30-Day Returns</span>
-  </div>
-  
-  <div class="wrap" id="productsSection">
-    <div class="sec-hd">
-      <div class="sec-h">🔥 ALL PRODUCTS</div>
-      <div class="search-bar" style="margin:0;width:auto;">
-        <input type="text" id="homeSearch" class="search-input" placeholder="🔍 Search gaming gear..." style="width:260px;">
-        <button class="btn-primary" onclick="filterHomeProducts()">Search</button>
-      </div>
-    </div>
-    <div class="pgrid" id="homeProductGrid"></div>
-  </div>
+  <div class="hero"><div class="wrap hero-in"><div><div class="h-t">GEAR UP<br><i>DOMINATE</i><br>THE GAME</div><p class="h-p">Premium gaming mice, mechanical keyboards, headsets, microphones, controllers & anime figures. Level up your setup.</p><div class="h-btns"><button class="btn-primary" onclick="navigateTo('shop')">Shop All</button><button class="btn-outline" onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})">View Products ↓</button></div></div><div style="text-align:center;background:rgba(0,230,255,.03);border-radius:30px;padding:20px;"><div style="font-size:80px;">🎮</div><div style="font-size:14px;color:var(--acc);margin-top:10px;">⭐ 14,000+ Gamers Trust Us</div></div></div></div>
+  <div class="trust"><span>🏆 Best Gaming Gear 2026</span><span>🎧 Top Rated Headsets</span><span>🚚 Free Shipping Over $50</span><span>🔒 30-Day Returns</span></div>
+  <div class="wrap" id="productsSection"><div class="sec-hd"><div class="sec-h">🔥 ALL PRODUCTS</div><div class="search-bar" style="margin:0;width:auto;"><input type="text" id="homeSearch" class="search-input" placeholder="🔍 Search gaming gear..." style="width:260px;"><button class="btn-primary" onclick="filterHomeProducts()">Search</button></div></div><div class="pgrid" id="homeProductGrid"></div></div>
 </div>
 
-<!-- SHOP PAGE (Accessories Only) -->
-<div class="pg" id="pg-shop">
-  <div class="wrap">
-    <div class="category-header">
-      <div style="font-size:64px;">🖱️</div>
-      <h1 class="category-title">PC GAMING ACCESSORIES</h1>
-      <p>Mice · Keyboards · Headsets · Microphones · Controllers · Anime Figures</p>
-    </div>
-    <div class="subcat-nav" id="shopSubNav"></div>
-    <div class="search-bar"><input type="text" id="shopSearch" class="search-input" placeholder="🔍 Search gaming mouse, keyboard, headset, mic, anime figure..."><button class="btn-primary" onclick="filterShop()">Search</button></div>
-    <div id="shopGrid" class="pgrid"></div>
-  </div>
-</div>
+<!-- SHOP PAGE -->
+<div class="pg" id="pg-shop"><div class="wrap"><div class="category-header"><div style="font-size:64px;">🖱️</div><h1 class="category-title">PC GAMING ACCESSORIES</h1><p>Mice · Keyboards · Headsets · Microphones · Controllers · Anime Figures</p></div><div class="subcat-nav" id="shopSubNav"></div><div class="search-bar"><input type="text" id="shopSearch" class="search-input" placeholder="🔍 Search gaming mouse, keyboard, headset..."><button class="btn-primary" onclick="filterShop()">Search</button></div><div id="shopGrid" class="pgrid"></div></div></div>
 
-<!-- SUPPORT PAGES CONTAINER -->
-<div id="supportPagesContainer"></div>
+<!-- ALL PAGES CONTAINER (Support, Company, Legal) -->
+<div id="allPagesContainer"></div>
 
 <!-- CART & SUCCESS -->
 <div class="pg" id="pg-cart"><div class="wrap" style="padding:40px 0;"><div id="cartPageContainer"></div></div></div>
@@ -201,11 +169,7 @@
 <footer class="footer-pro">
   <div class="footer-container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">⚡ GEARZONE</div>
-        <p>Your ultimate destination for premium gaming accessories. Level up your setup with the best gear.</p>
-        <div class="social-links"><a href="#">𝕏</a><a href="#">📘</a><a href="#">📷</a><a href="#">🎮</a></div>
-      </div>
+      <div class="footer-brand"><div class="footer-logo">⚡ GEARZONE</div><p>Your ultimate destination for premium gaming accessories. Level up your setup with the best gear.</p><div class="social-links"><a href="#">𝕏</a><a href="#">📘</a><a href="#">📷</a><a href="#">🎮</a></div></div>
       <div class="footer-col"><h4>Shop</h4><ul><li><a onclick="navigateTo('shop');setShopFilter('all')">PC Accessories</a></li><li><a onclick="navigateTo('shop');setShopFilter('mouse')">Gaming Mice</a></li><li><a onclick="navigateTo('shop');setShopFilter('keyboard')">Keyboards</a></li><li><a onclick="navigateTo('shop');setShopFilter('headset')">Headsets</a></li><li><a onclick="navigateTo('shop');setShopFilter('anime')">Anime Figures</a></li><li><a onclick="navigateTo('shop')">All Products</a></li></ul></div>
       <div class="footer-col"><h4>Support</h4><ul><li><a onclick="navigateTo('helpcenter')">Help Center</a></li><li><a onclick="navigateTo('shipping')">Shipping Info</a></li><li><a onclick="navigateTo('returns')">Returns</a></li><li><a onclick="navigateTo('trackorder')">Track Order</a></li><li><a onclick="navigateTo('contact')">Contact Us</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a onclick="navigateTo('about')">About Us</a></li><li><a onclick="navigateTo('careers')">Careers</a></li><li><a onclick="navigateTo('press')">Press</a></li><li><a onclick="navigateTo('blog')">Blog</a></li></ul></div>
@@ -216,7 +180,7 @@
 </footer>
 
 <script>
-  // ======================= PRODUCT DATA (Full Accessories Catalog) =======================
+  // PRODUCT DATA
   const PRODUCTS = [
     {id:1,name:"Ultralight FPS Gaming Mouse",cat:"mouse",icon:"🖱️",price:49.99,old:69.99,keywords:"gaming mouse wireless lightweight fps valorant",tag:"bestseller"},
     {id:2,name:"Mechanical RGB Keyboard",cat:"keyboard",icon:"⌨️",price:89.99,keywords:"mechanical keyboard gaming rgb hotswap",tag:"bestseller"},
@@ -256,88 +220,68 @@
   function closeCart(){document.getElementById('cart').classList.remove('show');document.getElementById('ov').classList.remove('show');}
   function showToast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
   
-  function getBadgeHTML(product){
-    if(product.tag === 'bestseller') return '<span class="badge bestseller">🔥 BESTSELLER</span>';
-    if(product.tag === 'new') return '<span class="badge new">✨ NEW</span>';
-    if(product.tag === 'deal') return '<span class="badge deal">⚡ DEAL</span>';
-    if(product.old) return '<span class="badge deal">⚡ SALE</span>';
-    return '';
-  }
+  function getBadgeHTML(p){if(p.tag==='bestseller')return'<span class="badge bestseller">🔥 BESTSELLER</span>';if(p.tag==='new')return'<span class="badge new">✨ NEW</span>';if(p.tag==='deal'||p.old)return'<span class="badge deal">⚡ DEAL</span>';return'';}
+  function productCard(p){return`<div class="pc"><div class="pc-img">${getBadgeHTML(p)}<span style="font-size:64px;">${p.icon}</span></div><div class="pc-b"><div class="pc-cat">${p.cat.toUpperCase()}</div><div class="pc-name">${p.name}</div><div class="price-row"><span class="pc-price">$${p.price}</span>${p.old?`<span class="pc-old">$${p.old}</span>`:''}</div><div class="card-footer"><button class="abtn" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>+</button><span style="font-size:12px;color:var(--muted);">⭐ ${p.tag==='bestseller'?'4.9':'4.8'}</span></div></div></div>`;}
   
-  function productCard(p){
-    return `<div class="pc">
-      <div class="pc-img">
-        ${getBadgeHTML(p)}
-        <span style="font-size:64px;">${p.icon}</span>
-      </div>
-      <div class="pc-b">
-        <div class="pc-cat">${p.cat.toUpperCase()}</div>
-        <div class="pc-name">${p.name}</div>
-        <div class="price-row">
-          <span class="pc-price">$${p.price}</span>
-          ${p.old ? `<span class="pc-old">$${p.old}</span>` : ''}
-        </div>
-        <div class="card-footer">
-          <button class="abtn" onclick='addToCart({id:${p.id},name:"${p.name.replace(/'/g,"\\'")}",price:${p.price},icon:"${p.icon}"})'>+</button>
-          <span style="font-size:12px;color:var(--muted);">⭐ ${p.tag === 'bestseller' ? '4.9' : '4.8'}</span>
-        </div>
-      </div>
-    </div>`;
-  }
-  
-  // HOME PAGE - ALL PRODUCTS
-  function renderHomeProducts(){
-    let filtered = PRODUCTS.filter(p => {
-      if(!homeSearchTerm) return true;
-      let kw = (p.name + ' ' + p.keywords + ' ' + p.cat).toLowerCase();
-      return kw.includes(homeSearchTerm.toLowerCase());
-    });
-    document.getElementById('homeProductGrid').innerHTML = filtered.map(productCard).join('');
-    if(!filtered.length) document.getElementById('homeProductGrid').innerHTML = '<div style="text-align:center;padding:60px;color:var(--muted);">No products found. Try another search term.</div>';
-  }
-  
-  function filterHomeProducts(){
-    homeSearchTerm = document.getElementById('homeSearch')?.value || '';
-    renderHomeProducts();
-  }
-  
-  // SHOP PAGE
-  function renderShopSubNav(){
-    let cats = [
-      {id:"all",label:"📦 All Products"},
-      {id:"mouse",label:"🖱️ Gaming Mice"},
-      {id:"keyboard",label:"⌨️ Keyboards"},
-      {id:"headset",label:"🎧 Headsets"},
-      {id:"mic",label:"🎙️ Microphones"},
-      {id:"controller",label:"🎮 Controllers"},
-      {id:"anime",label:"🗿 Anime Figures"},
-      {id:"chair",label:"🪑 Gaming Chairs"}
-    ];
-    document.getElementById('shopSubNav').innerHTML = cats.map(c => `<button class="subcat-btn ${currentShopFilter===c.id?'active':''}" onclick="setShopFilter('${c.id}')">${c.label}</button>`).join('');
-  }
-  
+  function renderHomeProducts(){let filtered=PRODUCTS.filter(p=>!homeSearchTerm||(p.name+' '+p.keywords+' '+p.cat).toLowerCase().includes(homeSearchTerm.toLowerCase()));document.getElementById('homeProductGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:60px;">No products found</div>';}
+  function filterHomeProducts(){homeSearchTerm=document.getElementById('homeSearch')?.value||'';renderHomeProducts();}
+  function renderShopSubNav(){let cats=[{id:"all",label:"📦 All Products"},{id:"mouse",label:"🖱️ Gaming Mice"},{id:"keyboard",label:"⌨️ Keyboards"},{id:"headset",label:"🎧 Headsets"},{id:"mic",label:"🎙️ Microphones"},{id:"controller",label:"🎮 Controllers"},{id:"anime",label:"🗿 Anime Figures"},{id:"chair",label:"🪑 Gaming Chairs"}];document.getElementById('shopSubNav').innerHTML=cats.map(c=>`<button class="subcat-btn ${currentShopFilter===c.id?'active':''}" onclick="setShopFilter('${c.id}')">${c.label}</button>`).join('');}
   function setShopFilter(filter){currentShopFilter=filter;renderShop();renderShopSubNav();}
   function filterShop(){shopSearchTerm=document.getElementById('shopSearch')?.value.toLowerCase()||'';renderShop();}
-  
-  function renderShop(){
-    let filtered = PRODUCTS.filter(p => {
-      if(currentShopFilter !== 'all' && p.cat !== currentShopFilter) return false;
-      if(shopSearchTerm){
-        let kw = (p.name + ' ' + p.keywords).toLowerCase();
-        return kw.includes(shopSearchTerm);
-      }
-      return true;
-    });
-    document.getElementById('shopGrid').innerHTML = filtered.map(productCard).join('');
-    if(!filtered.length) document.getElementById('shopGrid').innerHTML = '<div style="text-align:center;padding:60px;color:var(--muted);">No products found. Try another search term.</div>';
+  function renderShop(){let filtered=PRODUCTS.filter(p=>{if(currentShopFilter!=='all'&&p.cat!==currentShopFilter)return false;if(shopSearchTerm&&!(p.name+' '+p.keywords).toLowerCase().includes(shopSearchTerm))return false;return true;});document.getElementById('shopGrid').innerHTML=filtered.map(productCard).join('')||'<div style="text-align:center;padding:60px;">No products found</div>';}
+  function renderCartPage(){let container=document.getElementById('cartPageContainer');if(!cart.length){container.innerHTML='<div style="text-align:center;"><h3>Your cart is empty</h3><button class="btn-primary" style="margin-top:20px;" onclick="navigateTo(\'shop\')">Start Shopping →</button></div>';return;}let total=cart.reduce((a,i)=>a+i.price*i.qty,0);container.innerHTML=`<h2 style="margin-bottom:24px;">Shopping Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;align-items:center;background:var(--s1);margin:12px 0;padding:16px;border-radius:20px;"><div style="display:flex;align-items:center;gap:16px;"><span style="font-size:36px;">${i.icon}</span><div><strong>${i.name}</strong><div>$${i.price} each</div></div></div><div><button class="abtn" onclick="updateQty(${i.id},-1)">-</button><span style="margin:0 16px;">${i.qty}</span><button class="abtn" onclick="updateQty(${i.id},1)">+</button><button class="abtn" style="background:var(--red);margin-left:12px;" onclick="removeFromCart(${i.id})">🗑️</button></div><div class="pc-price">$${(i.price*i.qty).toFixed(2)}</div></div>`).join('')}<div style="text-align:right;margin-top:32px;padding:24px;background:var(--s1);border-radius:20px;"><h3>Total: <span class="pc-price">$${total.toFixed(2)}</span></h3><button class="btn-primary" style="margin-top:16px;" onclick="navigateTo('success');cart=[];saveCart();renderCartPage();">Place Order →</button></div></div>`;}
+
+  // CREATE ALL PAGES (Support, Company, Legal)
+  const pagesData = {
+    helpcenter: {title:"💬 Help Center", content:`<h2>Welcome to GearZone Help Center</h2><p>Our support team is available 24/7 to assist you with any questions about your order, products, or account.</p><h3>📞 Live Chat</h3><p>Click the chat icon in the bottom right corner to speak with a support agent instantly. Average response time: under 2 minutes.</p><h3>📧 Email Support</h3><p>Send us an email at <strong style="color:var(--acc);">support@gearzone.com</strong> and we'll respond within 4 hours.</p><h3>📱 WhatsApp</h3><p>+1 (555) 123-4567 - Available 9AM-9PM EST</p><h3>📚 Frequently Asked Questions</h3><ul><li>How fast is shipping? Orders ship within 24h, delivery 3-10 business days.</li><li>Can I return an item? Yes, 30-day hassle-free returns on physical products.</li><li>Are anime figures official? 100% officially licensed from Bandai, Good Smile, Kotobukiya.</li></ul>`},
+    shipping: {title:"🚚 Shipping Information", content:`<h2>Shipping Policy</h2><p>We ship worldwide with full tracking. All orders are processed within 24 hours of payment confirmation.</p><h3>📦 Shipping Rates & Delivery Times</h3><ul><li><strong>Standard Shipping</strong> - 5-10 business days - Free over $50 / $4.99</li><li><strong>Express Shipping</strong> - 2-4 business days - $12.99</li><li><strong>Priority Express</strong> - 1-2 business days - $24.99</li></ul><h3>🌍 International Shipping</h3><p>We ship to over 120 countries. Customs fees may apply depending on your location.</p><h3>🔔 Order Tracking</h3><p>Once your order ships, you'll receive a tracking number via email. You can also track your order <a onclick="navigateTo('trackorder')" style="color:var(--acc);cursor:pointer;">here</a>.</p>`},
+    returns: {title:"🔄 Returns & Refunds", content:`<h2>30-Day Hassle-Free Returns</h2><p>We want you to love your GearZone purchase. If you're not completely satisfied, you can return eligible items within 30 days of delivery.</p><h3>✅ Return Conditions</h3><ul><li>Items must be unused and in original packaging</li><li>Physical products only (digital items are non-refundable)</li><li>Return shipping is free for defective items</li></ul><h3>⚡ Digital Products Policy</h3><p>Steam keys, gift cards, and other digital items are non-refundable once delivered. If a key is faulty, contact us within 24h for a free replacement.</p><h3>📝 How to Start a Return</h3><p>Contact our support team with your order number and reason for return. We'll provide a prepaid return label within 24 hours.</p>`},
+    trackorder: {title:"📦 Track Your Order", content:`<h2>Order Tracking</h2><p>Enter your order number and email to track your shipment status.</p><div style="background:var(--s2);border-radius:20px;padding:32px;margin-top:24px;"><input type="text" id="trackOrderNum" class="search-input" placeholder="Order Number (e.g., #NG-12345)" style="margin-bottom:16px;"><input type="email" id="trackEmail" class="search-input" placeholder="Email Address" style="margin-bottom:16px;"><button class="btn-primary" onclick="showToast('Demo: Order #NG-12345 is out for delivery. Estimated delivery: April 5, 2026')">Track Order</button><p style="color:var(--muted);margin-top:16px;font-size:13px;">Example: #NG-12345 / support@gearzone.com</p></div>`},
+    contact: {title:"📞 Contact Us", content:`<div class="contact-grid"><div class="info-card"><h4>📧 Email Us</h4><p>support@gearzone.com<br>press@gearzone.com (media inquiries)</p><h4 style="margin-top:20px;">📞 Phone</h4><p>+1 (555) 234-5678<br>Mon-Fri, 9AM-6PM EST</p></div><div class="info-card"><h4>💬 Live Chat</h4><p>Available 24/7 - Click the chat icon</p><h4 style="margin-top:20px;">📍 Address</h4><p>123 Gaming Avenue, Suite 100<br>Los Angeles, CA 90001, USA</p></div></div><div style="margin-top:32px;background:var(--s2);border-radius:20px;padding:32px;"><h3>Send us a Message</h3><div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;"><input type="text" placeholder="Your Name" class="search-input"><input type="email" placeholder="Email Address" class="search-input"><textarea rows="4" placeholder="Your Message" class="search-input" style="border-radius:20px;"></textarea><button class="btn-primary" onclick="showToast('Message sent! We\\'ll reply within 24 hours.')">Send Message</button></div></div>`},
+    about: {title:"🏢 About GearZone", content:`<h2>Our Story</h2><p>Founded in 2020 by passionate gamers, GearZone started with a simple mission: provide the highest quality gaming accessories at fair prices. Today, we're trusted by over 14,000 gamers worldwide.</p><h3>🎯 Our Mission</h3><p>To level up every gamer's setup with premium gear that delivers performance, durability, and style.</p><h3>✨ Why Choose Us</h3><ul><li>Curated selection of top gaming brands</li><li>30-day satisfaction guarantee</li><li>Fast worldwide shipping</li><li>24/7 customer support</li><li>Official anime figures from Japan</li></ul>`},
+    careers: {title:"💼 Careers at GearZone", content:`<h2>Join Our Team</h2><p>We're always looking for talented individuals who are passionate about gaming and customer service.</p><h3>🌟 Open Positions</h3><ul><li><strong>Customer Support Specialist</strong> - Remote - Full time</li><li><strong>Warehouse Associate</strong> - Los Angeles, CA</li><li><strong>Marketing Manager</strong> - Remote - Full time</li><li><strong>Product Curator</strong> - Hybrid - Part time</li></ul><p>Send your resume to <strong style="color:var(--acc);">careers@gearzone.com</strong> with the position title in the subject line.</p>`},
+    press: {title:"📰 Press & Media", content:`<h2>Media Inquiries</h2><p>For press inquiries, interviews, or review samples, please contact our media relations team.</p><h3>📧 Press Contact</h3><p>press@gearzone.com</p><h3>📄 Recent Features</h3><ul><li>TechRadar: "Best Gaming Mice 2026" - GearZone Ultralight featured</li><li>IGN: "Top Gaming Headsets" - HyperX Cloud Alpha review</li><li>Wired: "The Future of Gaming Accessories"</li></ul><h3>📸 Media Kit</h3><p>Download our brand assets, logos, and product images: <a href="#" style="color:var(--acc);">Download Media Kit →</a></p>`},
+    blog: {title:"📝 GearZone Blog", content:`<h2>Latest Articles</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:24px;"><div class="info-card"><h4>🎮 Top 10 Gaming Mice of 2026</h4><p>Our expert picks for the best lightweight, wireless, and budget gaming mice this year.</p><button class="btn-outline" style="margin-top:12px;" onclick="showToast('Full article coming soon!')">Read More →</button></div><div class="info-card"><h4>⌨️ Mechanical Keyboard Guide</h4><p>Linear vs Tactile vs Clicky switches - which one is right for you?</p><button class="btn-outline" style="margin-top:12px;" onclick="showToast('Full article coming soon!')">Read More →</button></div><div class="info-card"><h4>🗿 Best Anime Figures 2026</h4><p>Top collectibles from Naruto, One Piece, Demon Slayer, and Jujutsu Kaisen.</p><button class="btn-outline" style="margin-top:12px;" onclick="showToast('Full article coming soon!')">Read More →</button></div></div>`},
+    privacy: {title:"🔒 Privacy Policy", content:`<h2>Privacy Policy</h2><p>Last updated: January 2026</p><p>At GearZone, we take your privacy seriously. This policy describes how we collect, use, and protect your personal information.</p><h3>📊 Information We Collect</h3><ul><li>Name, email, shipping address, phone number</li><li>Payment information (processed securely via Stripe)</li><li>Order history and product preferences</li></ul><h3>🔐 How We Use Your Information</h3><ul><li>Process and fulfill your orders</li><li>Communicate about order status and updates</li><li>Improve our products and services</li></ul><h3>🍪 Cookies</h3><p>We use essential cookies for cart functionality and session management. No advertising cookies are used without your consent.</p><h3>📧 Contact</h3><p>For privacy-related questions: privacy@gearzone.com</p>`},
+    terms: {title:"📜 Terms of Service", content:`<h2>Terms of Service</h2><p>By using GearZone's website and services, you agree to these terms.</p><h3>📦 Product Information</h3><p>All products are sourced from authorized distributors. Anime figures are 100% officially licensed. Product images are for illustration purposes.</p><h3>💳 Payment & Pricing</h3><p>Prices are in USD. We reserve the right to change prices at any time. Payment is processed securely via Stripe.</p><h3>🚚 Shipping & Delivery</h3><p>Estimated delivery times are not guaranteed but are based on carrier averages. We are not responsible for customs delays.</p><h3>🔄 Returns</h3><p>Physical items can be returned within 30 days. Digital items are non-refundable but replaced if faulty.</p>`},
+    cookie: {title:"🍪 Cookie Policy", content:`<h2>Cookie Policy</h2><p>This website uses cookies to enhance your browsing experience and provide essential functionality.</p><h3>🔧 Essential Cookies</h3><ul><li>Shopping cart functionality</li><li>Session management</li><li>Security and authentication</li></ul><h3>📊 Analytics Cookies</h3><p>We use anonymized analytics to understand how visitors use our site. You can opt out via browser settings.</p><h3>⚙️ Managing Cookies</h3><p>You can disable cookies in your browser settings. Note that disabling cookies may affect cart and checkout functionality.</p><p>By continuing to use our site, you consent to our use of essential cookies.</p>`}
+  };
+
+  function createAllPages(){
+    let container = document.getElementById('allPagesContainer');
+    if(!container) return;
+    container.innerHTML = '';
+    for(let [id, data] of Object.entries(pagesData)){
+      let div = document.createElement('div');
+      div.className = 'pg';
+      div.id = `pg-${id}`;
+      div.innerHTML = `<div class="wrap" style="padding:40px 0;"><div class="page-content">${data.content}</div></div>`;
+      container.appendChild(div);
+    }
   }
   
-  function renderCartPage(){
-    let container = document.getElementById('cartPageContainer');
-    if(!container) return;
-    if(!cart.length){
-      container.innerHTML = '<div style="text-align:center;"><h3>Your cart is empty</h3><button class="btn-primary" style="margin-top:20px;" onclick="navigateTo(\'shop\')">Start Shopping →</button></div>';
-      return;
-    }
-    let total = cart.reduce((a,i)=>a+i.price*i.qty,0);
-    container.innerHTML = `<h2 style="margin-bottom:24px;">Shopping Cart</h2>${cart.map(i=>`<div style="display:flex;justify-content:space-between;align-items:center;background:var(--s1);margin:12px 0;padding:16px;border-radius:20px;border:1px solid var(--border);"><div style="display:flex;align-items:center;gap:16px;"><span style="font-size:36px;">${i.icon}</span><div><strong>${i.name}</strong><div class="pc-price">$${i.price} each</div></div></div><div><button class="abtn" onclick="updateQty(${i.id},-1)">-</button><span style="margin:0 16px;font-weight:700;">${i.qty}</span><button class="abtn" onclick="updateQty(${i.id},1)">+</button><button class="abtn" style="background:var(--red);margin-left:12px;" onclick="removeFromCart(${i.id})">🗑️</button></div><div class="pc-price">$${(i.price*i.qty).toFixed(2)}</div></div>`).join('')}<div style="text-align:right;margin-top:32px;padding:24px;background:var(--s1);border-radius:20px;"><h3>Subtotal: <span class="pc-price" style="font-size:28px;">$${total.toFixed(2)}</span></h3><p style="color:var(--muted);margin:8px 0;">Free shipping on orders over $50</p><button class="btn-primary"
+  function navigateTo(page){
+    let allPages = ['home','shop','cart','success','helpcenter','shipping','returns','trackorder','contact','about','careers','press','blog','privacy','terms','cookie'];
+    allPages.forEach(p => {
+      let el = document.getElementById(`pg-${p}`);
+      if(el) el.classList.remove('on');
+    });
+    let target = document.getElementById(`pg-${page}`);
+    if(target) target.classList.add('on');
+    else navigateTo('home');
+    window.scrollTo(0,0);
+    document.querySelectorAll('.nbtn').forEach(btn=>btn.classList.remove('active'));
+    if(page==='home') document.querySelector('.nbtn[onclick*="home"]')?.classList.add('active');
+    if(page==='shop') document.querySelector('.nbtn[onclick*="shop"]')?.classList.add('active');
+    if(page==='helpcenter') document.querySelector('.nbtn[onclick*="helpcenter"]')?.classList.add('active');
+  }
+  
+  createAllPages();
+  renderHomeProducts();
+  renderShop();
+  renderShopSubNav();
+  renderCart();
+  window.setShopFilter=setShopFilter; window.filterHomeProducts=filterHomeProducts; window.filterShop=filterShop; window.updateQty=updateQty; window.navigateTo=navigateTo;
+</script>
+</body>
+</html>
